@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440" role="img" aria-labelledby="title-cases">
+  <title id="title-cases">Comparativo de indicadores históricos informados no briefing: Promoção Urbano Alimentos e Promoção Ultraprêmio (período de 3 meses)</title>
+  <defs>
+    <linearGradient id="gCase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3131"/>
+      <stop offset="100%" stop-color="#FF914D"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="440" rx="24" fill="#FFFFFF" stroke="#E8E3DF" stroke-width="2"/>
+  <rect x="36" y="32" width="48" height="6" rx="3" fill="url(#gCase)"/>
+  <text x="96" y="39" font-family="Poppins, sans-serif" font-size="11" font-weight="800" fill="#FF3131" letter-spacing="1.8">REGISTROS HISTÓRICOS DE BRIEFING · JANELA DE 3 MESES</text>
+  <text x="36" y="76" font-family="Alegreya Sans, sans-serif" font-size="30" font-weight="800" fill="#171717">Dimensões de Alcance vs. Cadastro em Campanhas Promocionais</text>
+
+  <g transform="translate(36, 106)">
+    <rect width="428" height="258" rx="18" fill="#FAF8F5" stroke="#ECE6E0"/>
+    <text x="28" y="38" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#6B6560">REFERÊNCIA 01 · DURAÇÃO: 3 MESES</text>
+    <text x="28" y="68" font-family="Alegreya Sans, sans-serif" font-size="26" font-weight="800" fill="#171717">Promoção Urbano Alimentos</text>
+    
+    <text x="28" y="108" font-family="Poppins, sans-serif" font-size="12" font-weight="700" fill="#404040">Usuários únicos no site (Alcance)</text>
+    <text x="400" y="108" text-anchor="end" font-family="Alegreya Sans, sans-serif" font-size="24" font-weight="900" fill="#171717">180 mil</text>
+    <rect x="28" y="118" width="372" height="18" rx="9" fill="#EAE4DF"/>
+    <rect x="28" y="118" width="372" height="18" rx="9" fill="#404040"/>
+
+    <text x="28" y="168" font-family="Poppins, sans-serif" font-size="12" font-weight="700" fill="#404040">Cadastros realizados (Participação)</text>
+    <text x="400" y="168" text-anchor="end" font-family="Alegreya Sans, sans-serif" font-size="24" font-weight="900" fill="#FF3131">91 mil</text>
+    <rect x="28" y="118" width="0" height="0"/>
+    <rect x="28" y="178" width="372" height="18" rx="9" fill="#EAE4DF"/>
+    <rect x="28" y="178" width="188" height="18" rx="9" fill="url(#gCase)"/>
+
+    <text x="28" y="224" font-family="Poppins, sans-serif" font-size="11" fill="#6B6560">Leitura técnica: diferenciação clara entre volume de chegada</text>
+    <text x="28" y="242" font-family="Poppins, sans-serif" font-size="11" fill="#6B6560">ao ambiente digital e efetivação de cadastro na jornada.</text>
+  </g>
+
+  <g transform="translate(496, 106)">
+    <rect width="428" height="258" rx="18" fill="#FAF8F5" stroke="#ECE6E0"/>
+    <text x="28" y="38" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#6B6560">REFERÊNCIA 02 · DURAÇÃO: 3 MESES</text>
+    <text x="28" y="68" font-family="Alegreya Sans, sans-serif" font-size="26" font-weight="800" fill="#171717">Promoção Ultraprêmio</text>
+    
+    <text x="28" y="108" font-family="Poppins, sans-serif" font-size="12" font-weight="700" fill="#404040">Acessos registrados (Alcance)</text>
+    <text x="400" y="108" text-anchor="end" font-family="Alegreya Sans, sans-serif" font-size="24" font-weight="900" fill="#171717">163 mil</text>
+    <rect x="28" y="118" width="372" height="18" rx="9" fill="#EAE4DF"/>
+    <rect x="28" y="118" width="337" height="18" rx="9" fill="#404040"/>
+
+    <text x="28" y="168" font-family="Poppins, sans-serif" font-size="12" font-weight="700" fill="#404040">Clientes cadastrados (Participação)</text>
+    <text x="400" y="168" text-anchor="end" font-family="Alegreya Sans, sans-serif" font-size="24" font-weight="900" fill="#FF3131">101 mil</text>
+    <rect x="28" y="178" width="372" height="18" rx="9" fill="#EAE4DF"/>
+    <rect x="28" y="178" width="209" height="18" rx="9" fill="url(#gCase)"/>
+
+    <text x="28" y="224" font-family="Poppins, sans-serif" font-size="11" fill="#6B6560">Leitura técnica: retenção consistente entre visita à página e</text>
+    <text x="28" y="242" font-family="Poppins, sans-serif" font-size="11" fill="#6B6560">conclusão do cadastro de participação promocional.</text>
+  </g>
+
+  <text x="36" y="404" font-family="Poppins, sans-serif" font-size="11" fill="#756E68">Nota de transparência: Dados informados em briefing estratégico (referência histórica). Não representam faturamento nem garantia de desempenho futuro.</text>
+</svg>

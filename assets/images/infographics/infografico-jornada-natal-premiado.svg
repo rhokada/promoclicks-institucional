@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="960" height="380" role="img" aria-labelledby="title-natal-flow">
+  <title id="title-natal-flow">Linha do tempo prevista para o Natal Premiado 2026: adesão de lojistas, participação de consumidores, apuração e divulgação</title>
+  <defs>
+    <linearGradient id="gNatal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3131"/>
+      <stop offset="100%" stop-color="#FF914D"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="380" rx="24" fill="#1B1918" stroke="#3A322E" stroke-width="2"/>
+  <text x="40" y="48" font-family="Poppins, sans-serif" font-size="11" font-weight="800" fill="#FFB181" letter-spacing="2">CRONOGRAMA OPERACIONAL PREVISTO · EDIÇÃO 2026</text>
+  <text x="40" y="84" font-family="Alegreya Sans, sans-serif" font-size="30" font-weight="800" fill="#FFFFFF">Marcos da Campanha Coletiva Natal Premiado</text>
+
+  <line x1="80" y1="150" x2="880" y2="150" stroke="url(#gNatal)" stroke-width="4"/>
+
+  <g transform="translate(40, 115)">
+    <circle cx="60" cy="35" r="16" fill="url(#gNatal)"/>
+    <rect x="0" y="68" width="204" height="146" rx="14" fill="#262321" stroke="#3D3734"/>
+    <text x="20" y="98" font-family="Poppins, sans-serif" font-size="11" font-weight="800" fill="#FF914D">ATÉ 22 NOV 2026</text>
+    <text x="20" y="124" font-family="Alegreya Sans, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Adesão de Lojistas</text>
+    <text x="20" y="150" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">Escolha do plano (Bronze a</text>
+    <text x="20" y="168" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">Diamante), envio de fachada</text>
+    <text x="20" y="186" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">e configuração da página.</text>
+  </g>
+
+  <g transform="translate(266, 115)">
+    <circle cx="60" cy="35" r="16" fill="url(#gNatal)"/>
+    <rect x="0" y="68" width="204" height="146" rx="14" fill="#262321" stroke="#FF914D"/>
+    <text x="20" y="98" font-family="Poppins, sans-serif" font-size="11" font-weight="800" fill="#FF914D">01 A 25 DEZ 2026</text>
+    <text x="20" y="124" font-family="Alegreya Sans, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Participação B2C</text>
+    <text x="20" y="150" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">Compras elegíveis nas lojas</text>
+    <text x="20" y="168" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">participantes e cadastro do</text>
+    <text x="20" y="186" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">cupom no site da campanha.</text>
+  </g>
+
+  <g transform="translate(492, 115)">
+    <circle cx="60" cy="35" r="16" fill="url(#gNatal)"/>
+    <rect x="0" y="68" width="204" height="146" rx="14" fill="#262321" stroke="#3D3734"/>
+    <text x="20" y="98" font-family="Poppins, sans-serif" font-size="11" font-weight="800" fill="#FF914D">26 DEZ 2026 (PREVISTO)</text>
+    <text x="20" y="124" font-family="Alegreya Sans, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Apuração &amp; Auditoria</text>
+    <text x="20" y="150" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">Verificação dos critérios de</text>
+    <text x="20" y="168" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">elegibilidade, dados pessoais</text>
+    <text x="20" y="186" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">e comprovantes fiscais.</text>
+  </g>
+
+  <g transform="translate(718, 115)">
+    <circle cx="60" cy="35" r="16" fill="url(#gNatal)"/>
+    <rect x="0" y="68" width="204" height="146" rx="14" fill="#262321" stroke="#3D3734"/>
+    <text x="20" y="98" font-family="Poppins, sans-serif" font-size="11" font-weight="800" fill="#FF914D">29 DEZ 2026 (PREVISTO)</text>
+    <text x="20" y="124" font-family="Alegreya Sans, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Divulgação Oficial</text>
+    <text x="20" y="150" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">Publicação do resultado nos</text>
+    <text x="20" y="168" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">canais oficiais PromoClicks</text>
+    <text x="20" y="186" font-family="Poppins, sans-serif" font-size="11" fill="#C5BFBB">após validação documental.</text>
+  </g>
+</svg>

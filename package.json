@@ -1,0 +1,15 @@
+{
+  "name": "promoclicks-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional multipáginas da PromoClicks — pré-renderizado, SEO técnico e orientado à conversão.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "check": "node scripts/build.mjs && node scripts/validate.mjs",
+    "preview": "node scripts/server.mjs",
+    "deploy": "node scripts/build.mjs && node scripts/validate.mjs && npx wrangler pages deploy dist --project-name promoclicks --commit-dirty=true"
+  }
+}

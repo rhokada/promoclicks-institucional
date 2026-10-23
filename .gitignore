@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+
+# Build e deploys
+dist/
+.wrangler/
+
+# Arquivos temporários e testes de ambiente
+.chrome-temp/
+.chrome-temp-capture/
+.chrome-temp-capture-mob/
+.og-temp/
+screenshots/
+*.log
+scratch/
+*.tmp
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

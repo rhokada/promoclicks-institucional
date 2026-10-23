@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-labelledby="title-pilares">
+  <title id="title-pilares">Pilares de Excelência Operacional PromoClicks: Governança Regulatória e Tecnologia de Dados</title>
+  <defs>
+    <linearGradient id="gArq" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3131"/>
+      <stop offset="100%" stop-color="#FF914D"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="360" rx="24" fill="#171717"/>
+  <text x="40" y="52" font-family="Poppins, sans-serif" font-size="11" font-weight="800" fill="#FF914D" letter-spacing="2">PILARES DE EXCELÊNCIA OPERACIONAL</text>
+  <text x="40" y="90" font-family="Alegreya Sans, sans-serif" font-size="32" font-weight="800" fill="#FFFFFF">Equilíbrio entre Governança Comercial e Engenharia de Dados</text>
+
+  <rect x="40" y="122" width="550" height="44" rx="12" fill="#404040"/>
+  <text x="60" y="149" font-family="Poppins, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">GOVERNANÇA &amp; RIGOR — Controle, Método, Segurança e Previsibilidade</text>
+  
+  <rect x="602" y="122" width="318" height="44" rx="12" fill="url(#gArq)"/>
+  <text x="622" y="149" font-family="Poppins, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">TECNOLOGIA &amp; GAMIFICAÇÃO — Dados e BI</text>
+
+  <g transform="translate(40, 188)">
+    <rect width="610" height="134" rx="16" fill="#232323" stroke="#383838"/>
+    <text x="24" y="34" font-family="Alegreya Sans, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Domínio sobre a operação de receita</text>
+    <text x="24" y="62" font-family="Poppins, sans-serif" font-size="12" fill="#CCCCCC">• Organizar processos comerciais e diminuir vazamentos de receita</text>
+    <text x="24" y="86" font-family="Poppins, sans-serif" font-size="12" fill="#CCCCCC">• Proteger o faturamento, reduzir riscos e criar estabilidade operacional</text>
+    <text x="24" y="110" font-family="Poppins, sans-serif" font-size="12" fill="#CCCCCC">• Rigor com normas aplicáveis (SPA) e regras compreensíveis para lojista e consumidor</text>
+  </g>
+
+  <g transform="translate(662, 188)">
+    <rect width="258" height="134" rx="16" fill="#2A1F1B" stroke="#FF914D"/>
+    <text x="20" y="34" font-family="Alegreya Sans, sans-serif" font-size="22" font-weight="800" fill="#FF914D">Transformação em ação</text>
+    <text x="20" y="62" font-family="Poppins, sans-serif" font-size="12" fill="#F5EAE6">• Leads em compradores</text>
+    <text x="20" y="86" font-family="Poppins, sans-serif" font-size="12" fill="#F5EAE6">• Vendas únicas em recorrência</text>
+    <text x="20" y="110" font-family="Poppins, sans-serif" font-size="12" fill="#F5EAE6">• Dados brutos em decisões</text>
+  </g>
+</svg>
