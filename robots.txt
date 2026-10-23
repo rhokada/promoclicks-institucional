@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://promoclicks.pages.dev/sitemap.xml

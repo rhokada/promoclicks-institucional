@@ -1,8 +1,7 @@
 # Dependências
 node_modules/
 
-# Build e deploys
-dist/
+# Cloudflare local cache
 .wrangler/
 
 # Arquivos temporários e testes de ambiente

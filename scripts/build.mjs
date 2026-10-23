@@ -18,17 +18,25 @@ mkdirSync(DIST, { recursive: true });
 // 1. Copia de ativos estáticos
 cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
-// 2. Renderização de cada rota
+// 2. Renderização de cada rota (em /dist e espelhada na raiz do repositório)
 const indexable = [];
 for (const [routeKey, route] of Object.entries(SITE_CONFIG.routes)) {
   const renderer = PAGE_RENDERERS[routeKey];
   if (!renderer) throw new Error(`Sem renderizador para a rota ${routeKey}`);
   const html = renderPageLayout(routeKey, renderer());
+  
+  // Grava em dist/
   const outPath = join(DIST, route.outputFile);
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, html, 'utf8');
+
+  // Grava diretamente na pasta correspondente na raiz do repositório
+  const rootOutPath = join(ROOT, route.outputFile);
+  mkdirSync(dirname(rootOutPath), { recursive: true });
+  writeFileSync(rootOutPath, html, 'utf8');
+
   if (route.robots.startsWith('index')) indexable.push(route.path);
-  console.log(`✔ ${route.path.padEnd(36)} → dist/${route.outputFile}`);
+  console.log(`✔ ${route.path.padEnd(36)} → dist/${route.outputFile} & ${route.outputFile}`);
 }
 
 // 3. sitemap.xml (apenas URLs canônicas indexáveis)
@@ -48,48 +56,44 @@ ${indexable
 </urlset>
 `;
 writeFileSync(join(DIST, 'sitemap.xml'), sitemap, 'utf8');
+writeFileSync(join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
 
 // 4. robots.txt
-writeFileSync(
-  join(DIST, 'robots.txt'),
-  `User-agent: *\nAllow: /\n\nSitemap: ${SITE_CONFIG.baseUrl}/sitemap.xml\n`,
-  'utf8'
-);
+const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_CONFIG.baseUrl}/sitemap.xml\n`;
+writeFileSync(join(DIST, 'robots.txt'), robotsTxt, 'utf8');
+writeFileSync(join(ROOT, 'robots.txt'), robotsTxt, 'utf8');
 
-// 5. _redirects (Netlify/Cloudflare Pages) — barra final canônica + 404
-writeFileSync(
-  join(DIST, '_redirects'),
-  [
-    '/quem-somos      /quem-somos/      301',
-    '/servicos        /servicos/        301',
-    '/natal-premiado  /natal-premiado/  301',
-    '/cases           /cases/           301',
-    '/participe       /participe/       301',
-    '/contato         /contato/         301',
-    '/*               /404.html         404',
-    ''
-  ].join('\n'),
-  'utf8'
-);
+// 5. _redirects (Netlify/Cloudflare Pages) — barra final canônica
+// Nota: Cloudflare Workers Assets não permite status 404 em _redirects (apenas 200, 301, 302, 303, 307, 308).
+// O 404 é tratado nativamente via "not_found_handling": "404-page" no wrangler.jsonc.
+const redirectsTxt = [
+  '/quem-somos      /quem-somos/      301',
+  '/servicos        /servicos/        301',
+  '/natal-premiado  /natal-premiado/  301',
+  '/cases           /cases/           301',
+  '/participe       /participe/       301',
+  '/contato         /contato/         301',
+  ''
+].join('\n');
+writeFileSync(join(DIST, '_redirects'), redirectsTxt, 'utf8');
+writeFileSync(join(ROOT, '_redirects'), redirectsTxt, 'utf8');
 
 // 6. _headers (Cloudflare Pages) — segurança e política de cache inteligente
-writeFileSync(
-  join(DIST, '_headers'),
-  [
-    '/*',
-    '  X-Content-Type-Options: nosniff',
-    '  X-Frame-Options: SAMEORIGIN',
-    '  Referrer-Policy: strict-origin-when-cross-origin',
-    '  Permissions-Policy: camera=(), microphone=(), geolocation=()',
-    '/assets/css/*',
-    '  Cache-Control: public, max-age=0, must-revalidate',
-    '/assets/js/*',
-    '  Cache-Control: public, max-age=0, must-revalidate',
-    '/assets/*',
-    '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
-    ''
-  ].join('\n'),
-  'utf8'
-);
+const headersTxt = [
+  '/*',
+  '  X-Content-Type-Options: nosniff',
+  '  X-Frame-Options: SAMEORIGIN',
+  '  Referrer-Policy: strict-origin-when-cross-origin',
+  '  Permissions-Policy: camera=(), microphone=(), geolocation=()',
+  '/assets/css/*',
+  '  Cache-Control: public, max-age=0, must-revalidate',
+  '/assets/js/*',
+  '  Cache-Control: public, max-age=0, must-revalidate',
+  '/assets/*',
+  '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
+  ''
+].join('\n');
+writeFileSync(join(DIST, '_headers'), headersTxt, 'utf8');
+writeFileSync(join(ROOT, '_headers'), headersTxt, 'utf8');
 
 console.log(`\nBuild concluído: ${Object.keys(SITE_CONFIG.routes).length} páginas, ${indexable.length} URLs no sitemap.`);
