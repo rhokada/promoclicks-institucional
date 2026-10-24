@@ -38,7 +38,7 @@ export function getOrganizationSchema() {
       '@type': 'Brand',
       name: SITE_CONFIG.brandName
     },
-    sameAs: ['https://www.instagram.com/campanha.promoclicks/']
+    sameAs: ['https://www.instagram.com/campanhas.promoclicks/']
   };
 }
 

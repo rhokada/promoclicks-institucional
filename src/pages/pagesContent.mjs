@@ -1488,7 +1488,7 @@ export function getContatoContent() {
               <strong>Horário operacional:</strong> Segunda a sexta-feira, das 09h às 18h (horário de Brasília).
             </p>
             <p style="font-size: 0.95rem; margin-bottom: 0;">
-              <strong>Instagram oficial:</strong> <a href="https://www.instagram.com/campanha.promoclicks/" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand-red); font-weight: 600;">${SITE_CONFIG.socialInstagram}</a>
+              <strong>Instagram oficial:</strong> <a href="https://www.instagram.com/campanhas.promoclicks/" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand-red); font-weight: 600;">${SITE_CONFIG.socialInstagram}</a>
             </p>
           </div>
 
@@ -1540,7 +1540,7 @@ export function getContatoContent() {
                   <option value="Campanha Coletiva">Interesse em próximas Campanhas Coletivas</option>
                   <option value="Campanha Exclusiva">Orçamento de Campanha Exclusiva para Marca ou Indústria</option>
                   <option value="Inteligencia de Dados">Inteligência de Dados Aplicada ao Varejo</option>
-                  <option value="Parceria Comercial">Parceria com Associação Comercial / Agência</option>
+                  <option value="Parceria Comercial">Parceria com Associação Comercial / Agência / Advocacia</option>
                   <option value="Duvida de Consumidor">Dúvida de Consumidor sobre participação</option>
                   <option value="Outro Assunto">Outro assunto institucional</option>
                 </select>
@@ -1633,11 +1633,6 @@ export function getPoliticaPrivacidadeContent() {
     <section class="section surface-light">
       <div class="container">
         <div class="legal-document">
-          <div class="notice-banner" role="note" style="margin-bottom: 2rem;">
-            <strong>Aviso de Homologação Jurídica (Sem Conteúdo Jurídico Fictício):</strong>
-            Em conformidade com as boas práticas de governança e integridade documental, esta página apresenta a <strong>estrutura técnica e as seções normativas previstas pela Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD)</strong>, devendo a redação jurídica definitiva, razão social controladora, CNPJ e contato do Encarregado (DPO) ser inseridos e homologados pelo departamento jurídico da PromoClicks antes da entrada em operação comercial.
-          </div>
-
           <h2>1. Identificação do Controlador e Escopo</h2>
           <p>
             Esta Política de Privacidade aplica-se ao site institucional da <strong>PromoClicks</strong> (<code>promoclicks.com.br</code>) e estabelece a arquitetura de governança para os subdomínios de campanhas promocionais operados pela marca (incluindo o ambiente previsto <code>natalpremiado.promoclicks.com.br</code>).

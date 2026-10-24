@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   baseUrl: process.env.SITE_URL || 'https://promoclicks.com.br',
   campaignPortalUrl: 'https://natalpremiado.promoclicks.com.br',
   locale: 'pt-BR',
-  socialInstagram: '@campanha.promoclicks',
+  socialInstagram: '@campanhas.promoclicks',
   themeColor: '#141414',
   defaultOgImage: '/assets/images/brand/og-promoclicks-share.jpg',
 
