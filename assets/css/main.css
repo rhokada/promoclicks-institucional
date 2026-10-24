@@ -3725,3 +3725,102 @@ body.nav-lock {
   max-width: 650px;
   margin: 0 auto 1.5rem;
 }
+
+/* ==========================================================================
+   13. Destaques Visuais de Conversão e Elementos Institucionais
+   ========================================================================== */
+
+/* Badge comemorativo / Destaque do Prêmio R$ 1.000 */
+.badge-prize {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #FF914D 0%, #FF3131 100%);
+  color: #FFFFFF !important;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(255, 49, 49, 0.3);
+  white-space: nowrap;
+}
+
+/* Callout de Alto Destaque para Campanhas Exclusivas */
+.exclusive-cta-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: linear-gradient(145deg, #1C1B1A 0%, #292523 100%);
+  border: 1px solid rgba(255, 145, 77, 0.4);
+  border-left: 6px solid var(--pc-orange);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin: 1.75rem 0;
+  color: #F7F4F2;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 768px) {
+  .exclusive-cta-callout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.exclusive-cta-callout__content {
+  flex: 1;
+}
+
+.exclusive-cta-callout__tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--pc-orange);
+  margin-bottom: 0.35rem;
+}
+
+.exclusive-cta-callout__title {
+  color: #FFFFFF !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.exclusive-cta-callout__desc {
+  color: #D6CEC8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.exclusive-cta-callout .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Detalhamento de Cases Desafiadores (Desafio, Ações, Resultados) */
+.case-detail-block {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--pc-border-light);
+}
+
+.case-detail-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--pc-orange);
+  margin-bottom: 0.25rem;
+}
+
+.case-detail-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--pc-text-secondary);
+  margin: 0;
+}
+

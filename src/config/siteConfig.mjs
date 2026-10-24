@@ -158,7 +158,7 @@ export const SITE_CONFIG = {
       outputFile: 'index.html',
       title: 'Promoções Comerciais Regulamentadas | PromoClicks',
       description:
-        'A PromoClicks desenvolve campanhas promocionais legalizadas a baixo custo para empresas de todos os portes incentivarem compras e acelerarem vendas.',
+        'A PromoClicks desenvolve campanhas promocionais legalizadas com relação custo/benefício imperdível para empresas de todos os portes incentivarem compras e acelerarem vendas.',
       robots: 'index, follow',
       h1: 'Promoções comerciais regulamentadas para impulsionar as vendas da sua empresa',
       searchIntent: 'Institucional e Comercial B2B (Descoberta de soluções promocionais e adesão ao Natal Premiado)',
@@ -166,7 +166,7 @@ export const SITE_CONFIG = {
       secondaryKeywords: [
         'inteligência promocional',
         'aceleração de vendas no varejo',
-        'promoções regulamentadas a baixo custo',
+        'promoções regulamentadas com excelente custo-benefício',
         'Natal Premiado PromoClicks'
       ],
       breadcrumbs: [{ name: 'Início', path: '/' }]
@@ -176,7 +176,7 @@ export const SITE_CONFIG = {
       outputFile: 'quem-somos/index.html',
       title: 'Quem Somos | PromoClicks: Expertise em Promoções Regulamentadas',
       description:
-        'Conheça a PromoClicks: empresa habilitada para operar promoções comerciais completas com segurança jurídica e baixo custo para todos os segmentos.',
+        'Conheça a PromoClicks: empresa habilitada para operar promoções comerciais completas com segurança jurídica e relação custo/benefício imperdível para todos os segmentos.',
       robots: 'index, follow',
       h1: 'PromoClicks: estratégia, tecnologia e operação de campanhas promocionais',
       searchIntent: 'Informacional e Institucional (Avaliação de autoridade, proposta de valor e método da PromoClicks)',
@@ -205,7 +205,7 @@ export const SITE_CONFIG = {
       secondaryKeywords: [
         'campanhas promocionais coletivas',
         'campanhas promocionais exclusivas',
-        'promoção regulamentada a baixo custo',
+        'promoção regulamentada com excelente custo-benefício',
         'inteligência de dados em promoções'
       ],
       breadcrumbs: [
@@ -303,7 +303,7 @@ export const SITE_CONFIG = {
       outputFile: 'cases/index.html',
       title: 'Cases e Big Numbers de Campanhas Promocionais | PromoClicks',
       description:
-        'Confira os big numbers e cases reais da PromoClicks em campanhas de 3 meses para marcas como Urbano Alimentos, Ultrafarma e L\'Oréal Paris.',
+        'Confira os big numbers e cases reais da PromoClicks em campanhas de 3 meses para marcas como Urbano Alimentos, Ultrafarma e SIG Combibloc.',
       robots: 'index, follow',
       h1: 'Cases e resultados de campanhas promocionais da PromoClicks',
       searchIntent: 'Comercial e Investigativa B2B (Avaliação de evidências, indicadores de alcance/cadastro e método analítico)',

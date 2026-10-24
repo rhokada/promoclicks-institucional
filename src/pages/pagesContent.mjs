@@ -27,10 +27,10 @@ export function getHomeContent() {
     <section class="hero-section">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Promoções Regulamentadas · Baixo Custo · Ao Alcance de Todas as Empresas</span>
+          <span class="eyebrow">Promoções Regulamentadas · Relação Custo/Benefício Imperdível · Ao Alcance de Todas as Empresas</span>
           <h1>${h1}</h1>
           <p class="lead">
-            A ${BRAND_HTML} é uma empresa capacitada e habilitada para realizar promoções comerciais legalizadas completas a baixo custo, com segurança jurídica e ao alcance de empresas de todos os portes e segmentos.
+            Somos especialistas em promoções e sorteios legalizados, conectando segurança jurídica, site, inteligência de dados e estratégia comercial para criar campanhas focadas em aumento de vendas e ticket médio, com uma relação custo/benefício imperdível para diversos segmentos e portes de empresa.
           </p>
           <div class="cta-group">
             <a href="/contato/?perfil=Lojista&amp;assunto=Quero+incluir+minha+empresa+/+loja+em+uma+campanha" class="btn btn--primary" data-track="hero_cta_primary" data-track-label="Home Hero: Fale com um especialista">
@@ -51,7 +51,7 @@ export function getHomeContent() {
             </div>
             <div class="trust-pill" role="listitem">
               <strong>Segurança e Legalidade</strong>
-              <span>Campanhas 100% legalizadas e aprovadas na SPA/MF a baixo custo</span>
+              <span>Campanhas 100% legalizadas e aprovadas na SPA/MF com custo-benefício imperdível</span>
             </div>
           </div>
         </div>
@@ -72,66 +72,6 @@ export function getHomeContent() {
       subtitle: 'Lideranças de mercado em bens de consumo, farmacêutica, embalagens e alimentos que aceleram resultados com soluções de inteligência promocional.',
       light: true
     })}
-
-    <!-- Proposta de Valor e Pilares de Execução -->
-    <section class="section surface-light">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">Por que PromoClicks</span>
-            <h2>Mais que visibilidade: incentivo direto à compra e conformidade legal.</h2>
-          </div>
-          <p>
-            Grandes redes investem valores expressivos em campanhas promocionais. A ${BRAND_HTML} disponibiliza essa mesma expertise para empresas de diversos portes e segmentos, com custos rateados e processos simplificados.
-          </p>
-        </div>
-
-        <div class="cards-grid cards-grid--4">
-          <article class="card">
-            <span class="card-num">01 · Estratégia</span>
-            <h3>Estímulo real à compra</h3>
-            <p>Criamos um motivo concreto para o consumidor escolher o seu estabelecimento, antecipar decisões de compra e elevar o ticket médio por comprovante fiscal.</p>
-          </article>
-          <article class="card">
-            <span class="card-num">02 · Identidade</span>
-            <h3>Com a cara da sua loja</h3>
-            <p>Sua empresa ganha uma página exclusiva da campanha (ex.: <code>natalpremiado.promoclicks.com.br/SUALOJA</code>), materiais personalizados e QR Code próprio.</p>
-          </article>
-          <article class="card">
-            <span class="card-num">03 · Acessibilidade</span>
-            <h3>Baixo custo e alto alcance</h3>
-            <p>Custos legais, impostos e burocracia são rateados entre os participantes, com investimento menor que o valor do próprio prêmio.</p>
-          </article>
-          <article class="card">
-            <span class="card-num">04 · Governança</span>
-            <h3>100% de conformidade legal</h3>
-            <p>Processos homologados perante a SPA (Secretaria de Prêmios e Apostas do Ministério da Fazenda), garantindo total tranquilidade jurídica para o seu negócio.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Arquitetura de Receita: Método Operacional -->
-    <section class="section surface-warm">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">Método Operacional</span>
-            <h2>Como transformamos campanhas promocionais em alavanca de receita.</h2>
-          </div>
-          <p class="section-lede">
-            Uma promoção de alto impacto não depende de improviso. Conectamos estímulo de compras no ponto de venda físico, validação digital ágil e inteligência analítica em etapas auditáveis.
-          </p>
-        </div>
-
-        ${renderArchitecturePipeline()}
-
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-          <a href="/quem-somos/" class="btn btn--outline">Conhecer nosso método e governança</a>
-          <a href="/servicos/inteligencia-de-dados/" class="btn btn--primary">Explorar inteligência de dados <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
 
     <!-- Apresentação das Soluções (Hub de Serviços) -->
     <section class="section surface-light">
@@ -168,6 +108,66 @@ export function getHomeContent() {
       </div>
     </section>
 
+    <!-- Proposta de Valor e Pilares de Execução (Posicionada após Soluções para equilíbrio de portfólio) -->
+    <section class="section surface-warm">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Por que PromoClicks</span>
+            <h2>Mais que visibilidade: incentivo direto à compra e conformidade legal.</h2>
+          </div>
+          <p>
+            Grandes redes investem valores expressivos em campanhas promocionais. A ${BRAND_HTML} disponibiliza essa mesma expertise para empresas de diversos portes e segmentos, com custos rateados e processos simplificados.
+          </p>
+        </div>
+
+        <div class="cards-grid cards-grid--4">
+          <article class="card">
+            <span class="card-num">01 · Estratégia</span>
+            <h3>Estímulo real à compra</h3>
+            <p>Criamos um motivo concreto para o consumidor escolher o seu estabelecimento, antecipar decisões de compra e elevar o ticket médio por comprovante fiscal.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">02 · Identidade</span>
+            <h3>Com a cara da sua loja</h3>
+            <p>Sua empresa ganha uma página exclusiva da campanha (ex.: <code>natalpremiado.promoclicks.com.br/SUALOJA</code>), materiais personalizados e QR Code próprio.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">03 · Acessibilidade</span>
+            <h3>Excelente relação custo-benefício e alto alcance</h3>
+            <p>Custos legais, impostos e burocracia são rateados entre os participantes, com investimento menor que o valor do próprio prêmio.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">04 · Governança</span>
+            <h3>100% de conformidade legal</h3>
+            <p>Processos homologados perante a SPA (Secretaria de Prêmios e Apostas do Ministério da Fazenda), garantindo total tranquilidade jurídica para o seu negócio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arquitetura de Receita: Método Operacional -->
+    <section class="section surface-light">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Método Operacional</span>
+            <h2>Como transformamos campanhas promocionais em alavanca de receita.</h2>
+          </div>
+          <p class="section-lede">
+            Uma promoção de alto impacto não depende de improviso. Conectamos estímulo de compras no ponto de venda físico, validação digital ágil e inteligência analítica em etapas auditáveis.
+          </p>
+        </div>
+
+        ${renderArchitecturePipeline()}
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+          <a href="/quem-somos/" class="btn btn--outline">Conhecer nosso método e governança</a>
+          <a href="/servicos/inteligencia-de-dados/" class="btn btn--primary">Explorar inteligência de dados <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- Destaque Comercial: Campanha Natal Premiado 2026 -->
     <section class="section surface-dark">
       <div class="container split-layout">
@@ -175,7 +175,7 @@ export function getHomeContent() {
           <span class="eyebrow">Campanha Coletiva em Destaque</span>
           <h2>Natal Premiado 2026: a campanha coletiva que coloca sua loja no centro do fim de ano.</h2>
           <p class="lead">
-            Seus clientes realizam compras elegíveis, cadastram o comprovante pelo celular e concorrem ao sorteio do prêmio de R$ 1.000, com página customizada para sua loja (ex.: <code>natalpremiado.promoclicks.com.br/SUALOJA</code>) e custos compartilhados.
+            Seus clientes realizam compras elegíveis, cadastram o comprovante pelo celular e concorrem ao sorteio do <span class="badge-prize">Prêmio de R$ 1.000</span>. Conte com identidade visual, QR Code exclusivo para a loja e cadastro de compras pelo link <code>natalpremiado.promoclicks.com.br/SUALOJA</code> com custos compartilhados.
           </p>
           <div class="notice-banner notice-banner--dark" role="note" style="margin-bottom: 1.5rem;">
             <strong>Transparência Comercial e Regulatória:</strong>
@@ -206,12 +206,22 @@ export function getHomeContent() {
         <div class="section-header">
           <div>
             <span class="eyebrow">Evidências e Big Numbers</span>
-            <h2>Não basta chamar atenção. É preciso entender a participação.</h2>
+            <h2>Conheça os Big Numbers da ${BRAND_HTML} e alguns cases desafiadores e seus resultados.</h2>
           </div>
           <p class="section-lede">
-            Avaliamos campanhas promocionais separando métricas de alcance (visibilidade e tráfego) de métricas de participação (cadastros efetivos e cupons registrados).
+            Mais de 343 mil acessos únicos, mais de 192 mil cadastros de participantes e cupons fiscais registrados, e 100% de conformidade regulatória perante a SPA/MF em janelas de 3 meses.
           </p>
         </div>
+
+        ${renderCaseMetricsComparison()}
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a href="/cases/" class="btn btn--outline" data-track="home_cases_cta" data-track-label="Home: Analisar cases e indicadores">
+            Analisar cases e metodologia de leitura completa <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
         ${renderCaseMetricsComparison()}
 
@@ -280,7 +290,7 @@ export function getQuemSomosContent() {
           <span class="eyebrow">Quem Somos · Empresa Habilitada em Promoções Comerciais</span>
           <h1>${h1}</h1>
           <p class="lead">
-            A ${BRAND_HTML} não é apenas uma plataforma: é uma empresa capacitada e habilitada para realizar promoções comerciais legalizadas completas. Nossa razão social é <strong>BIG DATA HELIX TECNOLOGIA LTDA</strong> (CNPJ: 26.702.873/0001-30). Levamos a expertise obtida na operação de grandes promoções nacionais para empresas de diversos portes e segmentos, garantindo segurança jurídica absoluta e baixo custo.
+            A ${BRAND_HTML} não é apenas uma plataforma: é uma empresa capacitada e habilitada para realizar promoções comerciais legalizadas completas. Nossa razão social é <strong>BIG DATA HELIX TECNOLOGIA LTDA</strong> (CNPJ: 26.702.873/0001-30). Levamos a expertise obtida na operação de grandes promoções nacionais para empresas de diversos portes e segmentos, garantindo segurança jurídica absoluta e uma relação custo/benefício imperdível.
           </p>
           <div class="cta-group">
             <a href="/servicos/" class="btn btn--primary">Conhecer nossas soluções <span aria-hidden="true">→</span></a>
@@ -340,7 +350,7 @@ export function getQuemSomosContent() {
             <span class="card-num">Missão Institucional</span>
             <h3>Democratizar promoções legalizadas de alto impacto</h3>
             <p>
-              Conectar nossa expertise na operação de grandes promoções a empresas e comércios de todos os segmentos e portes, impulsionando vendas com segurança jurídica inequívoca e baixo investimento.
+              Conectar nossa expertise na operação de grandes promoções a empresas e comércios de todos os segmentos e portes, impulsionando vendas com segurança jurídica inequívoca e excelente relação custo-benefício.
             </p>
           </article>
           <article class="card">
@@ -365,8 +375,8 @@ export function getQuemSomosContent() {
           </article>
           <article class="card">
             <span class="card-num">Valor 03 · Democratização</span>
-            <h3>Baixo custo e viabilidade</h3>
-            <p>Estruturamos modelos com custos rateados para que pequenos e médios lojistas tenham acesso ao mesmo padrão promocional de grandes redes.</p>
+            <h3>Relação custo/benefício e viabilidade</h3>
+            <p>Estruturamos modelos inteligentes com excelente relação custo-benefício para que empresas de diversos portes tenham acesso ao mesmo padrão promocional de grandes redes.</p>
           </article>
         </div>
       </div>
@@ -608,12 +618,12 @@ export function getServicoColetivasContent() {
           <article class="card">
             <span class="card-num">Vantagem 01</span>
             <h3>Investimento menor que o prêmio</h3>
-            <p>Custos legais, impostos, burocracia e premiação são rateados entre os participantes. Sua loja oferece um prêmio de R$ 1.000 com uma cota de adesão acessível e investimento previsível.</p>
+            <p>Custos legais, impostos, burocracia e premiação são rateados entre os participantes. Sua loja oferece o <span class="badge-prize">Prêmio de R$ 1.000</span> com uma cota de adesão acessível e investimento previsível.</p>
           </article>
           <article class="card">
             <span class="card-num">Vantagem 02</span>
-            <h3>Página customizada para sua empresa</h3>
-            <p>Mesmo sendo uma campanha compartilhada, seu estabelecimento recebe uma página própria dentro do portal oficial (ex.: <code>natalpremiado.promoclicks.com.br/SUALOJA</code>) e QR Code individual para sua loja.</p>
+            <h3>Identidade visual e QR Code exclusivo</h3>
+            <p>Seu estabelecimento recebe identidade visual própria, página exclusiva dentro do portal (<code>natalpremiado.promoclicks.com.br/SUALOJA</code>) e QR Code individual para o balcão.</p>
           </article>
           <article class="card">
             <span class="card-num">Vantagem 03</span>
@@ -632,11 +642,20 @@ export function getServicoColetivasContent() {
             <h2>Natal Premiado 2026: a oportunidade para o comércio vender mais no fim de ano.</h2>
           </div>
           <p class="section-lede">
-            Seus clientes realizam compras elegíveis, cadastram o comprovante pelo celular e concorrem ao sorteio do prêmio de R$ 1.000, com custos compartilhados entre os estabelecimentos aderentes.
+            Seus clientes realizam compras elegíveis, cadastram o comprovante pelo celular e concorrem ao sorteio do <span class="badge-prize">Prêmio de R$ 1.000</span>, com custos compartilhados entre os estabelecimentos aderentes.
           </p>
         </div>
 
         ${renderNatalTimeline()}
+
+        <div class="exclusive-cta-callout" role="complementary" aria-label="Campanhas Exclusivas">
+          <div class="exclusive-cta-callout__content">
+            <span class="exclusive-cta-callout__tag">Sob Medida para Redes e Indústrias</span>
+            <h3 class="exclusive-cta-callout__title">Deseja uma campanha exclusiva apenas para a sua rede?</h3>
+            <p class="exclusive-cta-callout__desc">Caso sua empresa busque um projeto individual fora do calendário coletivo, desenhamos mecânicas inovadoras, identidade própria e inteligência de dados dedicada.</p>
+          </div>
+          <a href="/servicos/campanhas-exclusivas/" class="btn btn--primary">Acessar Campanhas Exclusivas <span aria-hidden="true">→</span></a>
+        </div>
 
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
           <a href="/natal-premiado/" class="btn btn--primary">Acessar página completa do Natal Premiado <span aria-hidden="true">→</span></a>
@@ -901,7 +920,7 @@ export function getNatalPremiadoContent() {
           <span class="eyebrow">Campanha Coletiva Sazonal · Edição 2026</span>
           <h1>${h1}</h1>
           <p class="lead">
-            Seus clientes realizam compras elegíveis, cadastram o comprovante pelo celular e concorrem ao sorteio do prêmio de R$ 1.000. Inclua seu estabelecimento comercial e conte com página customizada (<code>natalpremiado.promoclicks.com.br/SUALOJA</code>), QR Code exclusivo e custos rateados.
+            Seus clientes realizam compras elegíveis, cadastram o comprovante pelo celular e concorrem ao sorteio do <span class="badge-prize">Prêmio de R$ 1.000</span>. Sua empresa conta com identidade visual e QR Code exclusivo para a loja, e cadastro de compras diretamente pelo link <code>natalpremiado.promoclicks.com.br/SUALOJA</code> com custos rateados.
           </p>
           <div class="cta-group">
             <a href="#planos" class="btn btn--primary" data-track="natal_hero_planos" data-track-label="Natal Hero: Escolher plano da loja">
@@ -913,16 +932,16 @@ export function getNatalPremiadoContent() {
           </div>
           <div class="trust-strip" role="list" aria-label="Resumo das condições do Natal Premiado">
             <div class="trust-pill" role="listitem">
-              <strong>Prêmio de R$ 1.000</strong>
-              <span>Premiação compartilhada entre os estabelecimentos participantes</span>
+              <strong class="badge-prize" style="font-size: 0.95rem; padding: 2px 10px;">Prêmio de R$ 1.000</strong>
+              <span>Premiação oficial compartilhada entre os estabelecimentos participantes</span>
             </div>
             <div class="trust-pill" role="listitem">
               <strong>Adesão de Lojistas: até 22/11</strong>
               <span>Fale conosco até 22/11 para garantir a vaga da sua loja</span>
             </div>
             <div class="trust-pill" role="listitem">
-              <strong>Período de Vendas na sua Loja: 01 a 25/12</strong>
-              <span>Compras e cadastro pelo link natalpremiado.promoclicks.com.br/SUALOJA</span>
+              <strong>Vendas na sua Loja: 01 a 25/12</strong>
+              <span>Cadastro de compras pelo link natalpremiado.promoclicks.com.br/SUALOJA</span>
             </div>
           </div>
         </div>
@@ -1136,62 +1155,80 @@ export function getCasesContent() {
       </div>
     </section>
 
-    <!-- Os 2 Cases de Referência do Post -->
+    <!-- Cases Reais e Big Numbers -->
     <section class="section surface-light" style="padding-top: 1rem;">
       <div class="container">
         <div class="section-header">
           <div>
             <span class="eyebrow">Casos Reais do Editorial PromoClicks</span>
-            <h2>Análise comparativa de tração em campanhas de 3 meses.</h2>
+            <h2>Conheça os Big Numbers da PromoClicks e alguns cases desafiadores e seus resultados.</h2>
           </div>
           <p class="section-lede">
-            Observe como mecânicas promocionais claras sustentam taxas expressivas de conversão entre o visitante que acessa o site da promoção e o participante que conclui seu cadastro com cupom fiscal.
+            Observe como mecânicas promocionais claras, tecnologia proprietária e governança jurídica sustentam taxas expressivas de conversão, inovação na cadeia e aceleração real de vendas.
           </p>
         </div>
 
         ${renderCaseMetricsComparison()}
 
-        <div class="cards-grid cards-grid--2">
+        <div class="cards-grid cards-grid--3">
           <article class="card card--featured">
-            <span class="card-num">Case de Sucesso 01 · Janela de 3 Meses</span>
-            <h3>Promoção Urbano Alimentos</h3>
+            <span class="card-num">Case 01 · Janela de 3 Meses</span>
+            <h3>Urbano Alimentos</h3>
             <p>
               Campanha promocional de abrangência massiva com foco em atração de tráfego qualificado para o ambiente digital e conversão de consumidores em base cadastrada de cupons fiscais.
             </p>
-            <div class="cards-grid cards-grid--2" style="margin: 1rem 0;">
-              <div class="plan-metric" style="margin: 0;">
-                <strong>180 mil</strong>
-                <span>usuários únicos no site da promoção em 3 meses</span>
-              </div>
-              <div class="plan-metric" style="margin: 0;">
-                <strong>91 mil</strong>
-                <span>cadastros realizados durante o período de 3 meses</span>
-              </div>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Desafio</span>
+              <p class="case-detail-text">Realizar uma promoção comercial de grande escala durante o período desafiador da COVID-19.</p>
             </div>
-            <p style="font-size: 1rem;">
-              <strong>Leitura técnica PromoClicks:</strong> A relação entre 180 mil usuários únicos e 91 mil cadastros evidencia que aproximadamente metade do público alcançado avançou para a etapa de identificação e envio de cupons fiscais, demonstrando baixa fricção na jornada do consumidor.
-            </p>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Ações</span>
+              <p class="case-detail-text">Forte integração da campanha com mídias digitais, lives e shows digitais, engajando os consumidores remotamente no ambiente online.</p>
+            </div>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Resultados</span>
+              <p class="case-detail-text">Aumento da exposição e reconhecimento da marca e alta taxa de conversão (&gt;70%), com 180 mil usuários únicos e 91 mil cadastros em 3 meses.</p>
+            </div>
           </article>
 
           <article class="card">
-            <span class="card-num">Case de Sucesso 02 · Janela de 3 Meses</span>
-            <h3>Promoção Ultraprêmio (Ultrafarma)</h3>
+            <span class="card-num">Case 02 · Janela de 3 Meses</span>
+            <h3>Ultrafarma</h3>
             <p>
-              Ação promocional orientada à alta retenção de jornada, destacando-se pela proporção extraordinária de clientes cadastrados frente ao volume total de acessos registrados.
+              Ação promocional orientada à alta retenção e estímulo de conversão no varejo farmacêutico e canais digitais de compra.
             </p>
-            <div class="cards-grid cards-grid--2" style="margin: 1rem 0;">
-              <div class="plan-metric" style="margin: 0;">
-                <strong>163 mil</strong>
-                <span>acessos registrados no ambiente digital em 3 meses</span>
-              </div>
-              <div class="plan-metric" style="margin: 0;">
-                <strong>101 mil</strong>
-                <span>clientes cadastrados na campanha em 3 meses</span>
-              </div>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Desafio</span>
+              <p class="case-detail-text">Aumentar a exposição da marca e acelerar as vendas nos canais de e-commerce online.</p>
             </div>
-            <p style="font-size: 1rem;">
-              <strong>Leitura técnica PromoClicks:</strong> O patamar de 101 mil clientes cadastrados a partir de 163 mil acessos reforça o poder do estímulo no ponto de venda: quando o consumidor acessa o QR Code com o comprovante em mãos na sua loja, a conversão em cadastro é imediata.
+            <div class="case-detail-block">
+              <span class="case-detail-label">Ações</span>
+              <p class="case-detail-text">Utilização de mecânicas de gamificação nas premiações com roleta digital interativa integrada ao fluxo de compras.</p>
+            </div>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Resultados</span>
+              <p class="case-detail-text">Aumento expressivo de 30% nas vendas online, registrando 163 mil acessos e 101 mil clientes cadastrados em 3 meses.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <span class="card-num">Case 03 · Inovação Tecnológica</span>
+            <h3>SIG (Embalagens Longa Vida)</h3>
+            <p>
+              Projeto pioneiro conectando inovação industrial, tecnologia de validação promocional e rastreamento unitário de produtos.
             </p>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Desafio</span>
+              <p class="case-detail-text">Lançar uma promoção utilizando inovação desenvolvida pela SIG: rastreamento total da cadeia de produção de cada unidade de leite longa-vida, do mercado até a casa do consumidor.</p>
+            </div>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Ações</span>
+              <p class="case-detail-text">Desenvolvimento de técnicas e integrações inovadoras na arquitetura do sistema promocional PromoClicks para validação ponta a ponta dos códigos únicos.</p>
+            </div>
+            <div class="case-detail-block">
+              <span class="case-detail-label">Resultados</span>
+              <p class="case-detail-text">Geração de dados e análises estratégicas sobre a inovação na cadeia produtiva, inteligência sobre o comportamento do consumidor e segurança operacional absoluta.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -1358,9 +1395,13 @@ export function getParticipeContent() {
                     <li>Plano escolhido (Bronze, Prata, Ouro ou Diamante)</li>
                     <li>Logotipo da loja para aplicação na página vinculada</li>
                   </ul>
-                  <div class="notice-banner" style="margin-top: 1.25rem;">
-                    <strong>Deseja uma campanha exclusiva apenas para a sua rede?</strong>
-                    Caso sua empresa busque um projeto individual fora do calendário coletivo, acesse nossa página de <a href="/servicos/campanhas-exclusivas/" style="text-decoration: underline; font-weight: 600;">Campanhas Exclusivas</a>.
+                  <div class="exclusive-cta-callout" role="complementary" aria-label="Campanhas Exclusivas" style="margin-top: 1.5rem;">
+                    <div class="exclusive-cta-callout__content">
+                      <span class="exclusive-cta-callout__tag">Sob Medida para Redes e Indústrias</span>
+                      <h4 class="exclusive-cta-callout__title">Deseja uma campanha exclusiva apenas para a sua rede?</h4>
+                      <p class="exclusive-cta-callout__desc">Caso sua empresa busque um projeto individual fora do calendário coletivo, desenvolvemos mecânicas exclusivas sob medida, tecnologia dedicada e gestão integral SPA.</p>
+                    </div>
+                    <a href="/servicos/campanhas-exclusivas/" class="btn btn--primary" style="margin-top: 0.75rem;">Acessar Campanhas Exclusivas <span aria-hidden="true">→</span></a>
                   </div>
                 </article>
               </div>

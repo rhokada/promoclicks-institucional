@@ -25,10 +25,10 @@ export function getOrganizationSchema() {
       height: 173
     },
     description:
-      'Empresa capacitada e habilitada para realizar promoções comerciais legalizadas completas a baixo custo para empresas de diversos portes e segmentos.',
+      'Empresa capacitada e habilitada para realizar promoções comerciais legalizadas completas com relação custo/benefício imperdível para empresas de diversos portes e segmentos.',
     knowsAbout: [
       'Marketing Promocional',
-      'Promoções Comerciais Regulamentadas a Baixo Custo',
+      'Promoções Comerciais Regulamentadas com Excelente Custo-Benefício',
       'Regulamentação SPA/MF e Lei 5.768/71',
       'Campanhas Promocionais Coletivas e Exclusivas',
       'Sorteios Eletrônicos pela Loteria Federal',

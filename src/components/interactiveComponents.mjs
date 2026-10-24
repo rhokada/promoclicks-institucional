@@ -208,9 +208,9 @@ export function renderCaseMetricsComparison() {
         <span class="pipeline-tag">Big Numbers PromoClicks · Casos Reais</span>
         <span class="badge-neutral">Experiência Comprovada</span>
       </div>
-      <h3 class="cases-metric-widget__title">Números que dão contexto à nossa experiência em campanhas de grande escala.</h3>
+      <h3 class="cases-metric-widget__title">Conheça os Big Numbers da PromoClicks e alguns cases desafiadores e seus resultados.</h3>
       <p class="cases-metric-widget__desc">
-        Campanhas com mecânicas claras e jornadas digitais fluidas sustentam volumes massivos de participantes engajados, protegendo a reputação da marca e gerando inteligência comercial.
+        Campanhas com mecânicas claras, governança jurídica SPA e jornadas digitais fluidas sustentam volumes massivos de participantes engajados, protegendo a reputação da marca e gerando inteligência comercial.
       </p>
     </div>
 
@@ -258,14 +258,14 @@ export function renderCaseMetricsComparison() {
               <strong class="metric-value metric-value--primary">91 mil</strong>
             </div>
             <div class="metric-bar-track">
-              <div class="metric-bar-fill metric-bar-fill--gradient" style="width: 50.5%;"></div>
+              <div class="metric-bar-fill metric-bar-fill--gradient" style="width: 70%;"></div>
             </div>
           </div>
         </div>
 
         <div class="case-metric-card__footer">
-          <span class="conversion-kpi">Taxa de conversão do fluxo: <strong>50,5%</strong></span>
-          <p class="case-metric-note">Leitura técnica: Alta atratividade de marca aliada a um funil de cadastro mobile simplificado na sua loja.</p>
+          <span class="conversion-kpi">Taxa de conversão: <strong>&gt;70%</strong></span>
+          <p class="case-metric-note">Desafio COVID superado com integração de mídias digitais, lives e shows digitais gerando alto reconhecimento de marca.</p>
         </div>
       </div>
 
@@ -299,8 +299,43 @@ export function renderCaseMetricsComparison() {
         </div>
 
         <div class="case-metric-card__footer">
-          <span class="conversion-kpi">Taxa de conversão do fluxo: <strong>62,0%</strong></span>
-          <p class="case-metric-note">Leitura técnica: Excelente retenção na sua loja convertendo compradores presenciais em participantes cadastrados.</p>
+          <span class="conversion-kpi">Crescimento Online: <strong>+30% em vendas</strong></span>
+          <p class="case-metric-note">Gamificação interativa com roleta digital nas premiações impulsionando vendas no e-commerce e retenção de compradores.</p>
+        </div>
+      </div>
+
+      <!-- Case SIG -->
+      <div class="case-metric-card">
+        <div class="case-metric-card__header">
+          <span class="case-ref-tag">Case 03 · Inovação Tecnológica</span>
+          <h4 class="case-metric-card__title">Promoção SIG (Embalagens Longa Vida)</h4>
+        </div>
+
+        <div class="case-metric-bars">
+          <div class="metric-row">
+            <div class="metric-label-row">
+              <span class="metric-label">Cadeia Produtiva Rastreada</span>
+              <strong class="metric-value">100%</strong>
+            </div>
+            <div class="metric-bar-track">
+              <div class="metric-bar-fill metric-bar-fill--dark" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <div class="metric-row">
+            <div class="metric-label-row">
+              <span class="metric-label">Rastreio Unidade a Unidade</span>
+              <strong class="metric-value metric-value--primary">Ponta a Ponta</strong>
+            </div>
+            <div class="metric-bar-track">
+              <div class="metric-bar-fill metric-bar-fill--gradient" style="width: 100%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-metric-card__footer">
+          <span class="conversion-kpi">Inteligência: <strong>Dados Estratégicos</strong></span>
+          <p class="case-metric-note">Inovação pioneira de rastreabilidade de cada embalagem de leite longa-vida da indústria até a casa do consumidor.</p>
         </div>
       </div>
     </div>
