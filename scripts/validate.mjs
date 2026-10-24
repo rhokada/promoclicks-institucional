@@ -39,7 +39,11 @@ for (const route of Object.values(SITE_CONFIG.routes)) {
   if (desc && (desc.length < 110 || desc.length > 175)) warnings.push(`[${tag}] description com ${desc.length} caracteres`);
 
   const canonical = (html.match(/<link rel="canonical" href="([^"]*)"/) || [])[1];
-  if (canonical !== `${SITE_CONFIG.baseUrl}${route.path}`) err(tag, `canonical incorreta: ${canonical}`);
+  if (route.path !== '/404.html') {
+    if (canonical !== `${SITE_CONFIG.baseUrl}${route.path}`) err(tag, `canonical incorreta: ${canonical}`);
+  } else if (canonical) {
+    err(tag, 'página 404 não deve conter tag canonical');
+  }
   if (!html.includes(`<meta name="robots" content="${route.robots}"`)) err(tag, 'robots incorreto');
   for (const og of ['og:title', 'og:description', 'og:url', 'og:image', 'og:locale']) {
     if (!html.includes(`property="${og}"`)) err(tag, `${og} ausente`);

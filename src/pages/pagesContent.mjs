@@ -709,6 +709,59 @@ export function getServicoExclusivasContent() {
           </article>
         </div>
 
+        <!-- Matriz de Entregáveis e Insumos da Campanha Exclusiva -->
+        <div style="margin-top: 3rem;">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Entregáveis e Planejamento</span>
+              <h2>O que está incluído na operação de uma campanha exclusiva.</h2>
+            </div>
+            <p class="section-lede">
+              Transparência em cada etapa: veja exatamente o que a equipe PromoClicks entrega e quais são as dependências operacionais da sua empresa.
+            </p>
+          </div>
+
+          <div class="cards-grid cards-grid--3">
+            <article class="card">
+              <span class="card-num">Entregáveis Jurídicos</span>
+              <h3>Assessoria Regulatória SPA</h3>
+              <ul class="check-list">
+                <li>Redação do regulamento oficial e plano de operação</li>
+                <li>Submissão e acompanhamento no SCPC / SPA do Ministério da Fazenda</li>
+                <li>Recolhimento de taxas de fiscalização e emissão do Certificado de Autorização</li>
+                <li>Auditoria de conformidade e prestação de contas legal ao término</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="card-num">Entregáveis Tecnológicos</span>
+              <h3>Plataforma e Motor de Validação</h3>
+              <ul class="check-list">
+                <li>Hotsite mobile-first sob domínio ou subdomínio exclusivo da sua marca</li>
+                <li>Motor de captura e auditoria de comprovantes fiscais (NFC-e / SAT / ECF)</li>
+                <li>Algoritmo antifraude com validação de duplicidade de chave fiscal</li>
+                <li>Geração automática de números da sorte vinculados à Loteria Federal</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="card-num">Insumos e Dependências</span>
+              <h3>O que a sua empresa fornece</h3>
+              <ul class="check-list">
+                <li>Definição da premiação ou verba total destinada aos prêmios</li>
+                <li>Relação de produtos participantes (linhas padrão ou aceleradoras)</li>
+                <li>Manual de aplicação da identidade visual e guia de marca</li>
+                <li>Prazos de protocolo: recomenda-se início de 40 a 60 dias antes da veiculação</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="notice-banner" role="note" style="margin-top: 2.5rem;">
+          <strong>Referência de Escala em Operações Dedicadas:</strong>
+          Empresas como <em>Urbano Alimentos</em> e <em>Ultraprêmio</em> operaram estruturas exclusivas com captação superior a 90 mil cadastros em janelas trimestrais. Confira a análise metodológica e os indicadores completos em nossa página de <a href="/cases/" style="color: var(--color-brand-red); font-weight: 700;">Cases de Sucesso</a>.
+        </div>
+
         <div class="cta-group" style="margin-top: 2.5rem;">
           <a href="/contato/?perfil=Marca+ou+Rede&amp;assunto=Campanha+Exclusiva" class="btn btn--primary">Agendar reunião de briefing <span aria-hidden="true">→</span></a>
           <a href="/cases/" class="btn btn--outline">Ver cases e Big Numbers da PromoClicks</a>
@@ -758,11 +811,79 @@ export function getServicoDadosContent() {
         </div>
 
         ${renderArchitecturePipeline({
-          title: 'Ciclo Dedicado para Campanhas Exclusivas',
-          subtitle: 'Operação personalizada desenhada para as metas de sell-out, ticket médio e mix de produtos da sua marca.'
+          title: 'Ciclo Dedicado para Inteligência Promocional',
+          subtitle: 'Operação analítica desenhada para medir sell-out, ticket médio e comportamento de compra.',
+          actionLink: '/contato/?assunto=Inteligencia+de+Dados+Promocionais',
+          actionLabel: 'Falar com especialista em inteligência de dados'
         })}
 
-        <div style="text-align: center; margin-top: 1.5rem;">
+        <!-- Dicionário Metodológico e Entregáveis de BI -->
+        <div style="margin-top: 3rem;">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Dicionário e Critérios Analíticos</span>
+              <h2>Como estruturamos os indicadores de campanha.</h2>
+            </div>
+            <p class="section-lede">
+              Para orientar decisões gerenciais sem distorções, separamos rigorosamente cada métrica do funil promocional:
+            </p>
+          </div>
+
+          <div class="cards-grid cards-grid--3">
+            <article class="card">
+              <span class="card-num">Nível 01 · Topo</span>
+              <h3>Alcance e Visitas Únicas</h3>
+              <p>Mede o volume de acessos ao hotsite ou leituras de QR Code no PDV. Indica a atratividade visual das peças e a curiosidade inicial gerada pela premiação no consumidor.</p>
+              <div class="pipeline-card__footer" style="margin-top: 1rem;">
+                <span class="pipeline-metric-tag">Atratividade de Marca</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-num">Nível 02 · Meio</span>
+              <h3>Cadastros com Consentimento LGPD</h3>
+              <p>Consumidores reais que completaram seus dados de identificação e contato de forma consentida, gerando uma base proprietária e qualificada para a empresa promotora.</p>
+              <div class="pipeline-card__footer" style="margin-top: 1rem;">
+                <span class="pipeline-metric-tag">Base Própria de Contatos</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-num">Nível 03 · Fundo</span>
+              <h3>Cupons e Compras Fiscais Válidas</h3>
+              <p>Notas fiscais autenticadas que cumpriram todos os critérios de valor mínimo e período. Mede diretamente o engajamento comercial e a conversão em vendas na loja.</p>
+              <div class="pipeline-card__footer" style="margin-top: 1rem;">
+                <span class="pipeline-metric-tag">Auditoria Fiscal Concluída</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="cards-grid cards-grid--2" style="margin-top: 1.5rem;">
+            <article class="card">
+              <span class="card-num">Entregáveis de BI</span>
+              <h3>Relatórios e Painéis Executivos</h3>
+              <ul class="check-list">
+                <li>Painel dinâmico para acompanhamento diário de participações</li>
+                <li>Curva horária e dias da semana com maior registro de compras</li>
+                <li>Distribuição geográfica por filial, cidade ou estabelecimento parceiro</li>
+                <li>Mapeamento de ticket médio apurado nos comprovantes fiscais participantes</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <span class="card-num">Governança dos Dados</span>
+              <h3>Limites Metodológicos e Segurança LGPD</h3>
+              <ul class="check-list">
+                <li>Total conformidade com a Lei nº 13.709/2018 (LGPD) e finalidade promocional específica</li>
+                <li>Auditoria eletrônica de cupons impedindo duplicidades e fraudes na emissão de números da sorte</li>
+                <li>Métricas analisadas com notas conceituais (distinção entre acessos brutos e compras fiscais)</li>
+                <li>Relatório final entregue pronto para auditoria da Secretaria de Prêmios e Apostas (SPA/MF)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
           <a href="/cases/" class="btn btn--outline">Ver leitura aplicada nos cases Urbano e Ultraprêmio <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -1358,7 +1479,20 @@ export function getContatoContent() {
             </article>
           </div>
 
-          <div class="notice-banner" role="note">
+          <div class="card" style="margin-top: 1.5rem; background: var(--color-surface); border-left: 4px solid var(--color-brand-red);">
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Canais Oficiais de Atendimento</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 0.5rem;">
+              <strong>E-mail comercial:</strong> <a href="mailto:contato@promoclicks.com.br" style="color: var(--color-brand-red); font-weight: 600;">contato@promoclicks.com.br</a>
+            </p>
+            <p style="font-size: 0.95rem; margin-bottom: 0.5rem;">
+              <strong>Horário operacional:</strong> Segunda a sexta-feira, das 09h às 18h (horário de Brasília).
+            </p>
+            <p style="font-size: 0.95rem; margin-bottom: 0;">
+              <strong>Instagram oficial:</strong> <a href="https://www.instagram.com/campanha.promoclicks/" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand-red); font-weight: 600;">${SITE_CONFIG.socialInstagram}</a>
+            </p>
+          </div>
+
+          <div class="notice-banner" role="note" style="margin-top: 1.5rem;">
             <strong>Presença Digital e Transparência:</strong>
             Acompanhe as atualizações oficiais pelo Instagram <strong>${SITE_CONFIG.socialInstagram}</strong>. Nenhuma taxa é cobrada de consumidores para recebimento de prêmios contemplados.
           </div>
@@ -1457,19 +1591,25 @@ export function getContatoContent() {
             </div>
           </form>
 
-          <!-- Painel de Retorno Transparente (Sem simulação enganosa de backend) -->
+          <!-- Painel de Retorno Transparente e Canais de Envio Direto -->
           <div class="form-feedback" id="form-feedback" role="status" aria-live="polite" tabindex="-1" hidden>
-            <h3>Resumo da solicitação preparado</h3>
-            <p id="feedback-intro" style="font-size: 1rem; margin-bottom: 0.5rem;"></p>
-            <p style="font-size: 1rem; margin-bottom: 0.5rem;">
-              <strong>Nota técnica de transparência:</strong> Este ambiente institucional opera em arquitetura estática pré-renderizada e não realiza disparo silencioso para banco de dados sem a integração do endpoint de produção. Copie o resumo estruturado abaixo para encaminhar diretamente ao atendimento comercial da PromoClicks:
-            </p>
-            <pre class="summary-box" id="form-summary-box"></pre>
-            <div class="cta-group" style="margin-top: 1rem;">
-              <button type="button" class="btn btn--primary" id="copy-summary-btn" data-track="contact_copy_summary" data-track-label="Copiar resumo do contato">
-                Copiar resumo para a área de transferência
+            <h3>Sua solicitação está pronta para envio</h3>
+            <p id="feedback-intro" style="font-size: 1rem; margin-bottom: 0.75rem;"></p>
+            <div class="cta-group" style="margin-bottom: 1.25rem;">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--primary" id="whatsapp-summary-btn" style="background: #25D366; border-color: #25D366; color: #fff;">
+                Conversar no WhatsApp com este resumo <span aria-hidden="true">→</span>
+              </a>
+              <a href="#" class="btn btn--secondary" id="email-summary-btn">
+                Enviar por E-mail (contato@promoclicks.com.br)
+              </a>
+              <button type="button" class="btn btn--outline" id="copy-summary-btn" data-track="contact_copy_summary" data-track-label="Copiar resumo do contato">
+                Copiar texto do resumo
               </button>
             </div>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-text-muted);">
+              <strong>Resumo estruturado gerado:</strong>
+            </p>
+            <pre class="summary-box" id="form-summary-box"></pre>
           </div>
         </div>
       </div>

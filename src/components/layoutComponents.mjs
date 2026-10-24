@@ -24,7 +24,7 @@ export function renderHead(routeKey) {
   <title>${route.title}</title>
   <meta name="description" content="${route.description}">
   <meta name="robots" content="${route.robots}">
-  <link rel="canonical" href="${canonicalUrl}">
+  ${routeKey !== '/404.html' ? `<link rel="canonical" href="${canonicalUrl}">` : ''}
   <link rel="icon" type="image/svg+xml" href="/assets/images/brand/favicon.svg">
 
   <!-- Open Graph / Social Media Preview -->

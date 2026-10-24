@@ -63,22 +63,41 @@ const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_CONFIG.baseUrl}/si
 writeFileSync(join(DIST, 'robots.txt'), robotsTxt, 'utf8');
 writeFileSync(join(ROOT, 'robots.txt'), robotsTxt, 'utf8');
 
-// 5. _redirects (Netlify/Cloudflare Pages) — barra final canônica
+// 5. _redirects (Netlify/Cloudflare Pages) — barra final canônica e normalização permanente 301 de index.html
 // Nota: Cloudflare Workers Assets não permite status 404 em _redirects (apenas 200, 301, 302, 303, 307, 308).
 // O 404 é tratado nativamente via "not_found_handling": "404-page" no wrangler.jsonc.
 const redirectsTxt = [
-  '/quem-somos      /quem-somos/      301',
-  '/servicos        /servicos/        301',
-  '/natal-premiado  /natal-premiado/  301',
-  '/cases           /cases/           301',
-  '/participe       /participe/       301',
-  '/contato         /contato/         301',
+  '/index.html                                  /                                      301',
+  '/quem-somos                                  /quem-somos/                           301',
+  '/quem-somos/index.html                       /quem-somos/                           301',
+  '/servicos                                    /servicos/                             301',
+  '/servicos/index.html                         /servicos/                             301',
+  '/servicos/campanhas-coletivas                /servicos/campanhas-coletivas/         301',
+  '/servicos/campanhas-coletivas/index.html     /servicos/campanhas-coletivas/         301',
+  '/servicos/campanhas-exclusivas               /servicos/campanhas-exclusivas/        301',
+  '/servicos/campanhas-exclusivas/index.html    /servicos/campanhas-exclusivas/        301',
+  '/servicos/inteligencia-de-dados              /servicos/inteligencia-de-dados/       301',
+  '/servicos/inteligencia-de-dados/index.html   /servicos/inteligencia-de-dados/       301',
+  '/natal-premiado                              /natal-premiado/                       301',
+  '/natal-premiado/index.html                   /natal-premiado/                       301',
+  '/cases                                       /cases/                                301',
+  '/cases/index.html                            /cases/                                301',
+  '/participe                                   /participe/                            301',
+  '/participe/index.html                        /participe/                            301',
+  '/contato                                     /contato/                              301',
+  '/contato/index.html                          /contato/                              301',
+  '/politica-de-privacidade                     /politica-de-privacidade/              301',
+  '/politica-de-privacidade/index.html          /politica-de-privacidade/              301',
+  '/termos-de-uso                               /termos-de-uso/                        301',
+  '/termos-de-uso/index.html                    /termos-de-uso/                        301',
+  '/regulamento                                 /regulamento/                          301',
+  '/regulamento/index.html                      /regulamento/                          301',
   ''
 ].join('\n');
 writeFileSync(join(DIST, '_redirects'), redirectsTxt, 'utf8');
 writeFileSync(join(ROOT, '_redirects'), redirectsTxt, 'utf8');
 
-// 6. _headers (Cloudflare Pages) — segurança e política de cache inteligente
+// 6. _headers (Cloudflare Pages) — segurança e política de cache inteligente sem sobreposição conflitante
 const headersTxt = [
   '/*',
   '  X-Content-Type-Options: nosniff',
@@ -89,7 +108,7 @@ const headersTxt = [
   '  Cache-Control: public, max-age=0, must-revalidate',
   '/assets/js/*',
   '  Cache-Control: public, max-age=0, must-revalidate',
-  '/assets/*',
+  '/assets/images/*',
   '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
   ''
 ].join('\n');

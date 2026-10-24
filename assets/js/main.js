@@ -221,8 +221,23 @@
 
       if (summaryBox) summaryBox.textContent = preparedText;
       if (feedbackIntro) {
-        feedbackIntro.textContent = `Obrigado, ${(v.nome || '').split(' ')[0]}. Seu resumo foi organizado no navegador — nenhum dado foi enviado automaticamente.`;
+        feedbackIntro.textContent = `Obrigado, ${(v.nome || '').split(' ')[0]}. Seu resumo foi gerado com sucesso. Escolha abaixo como deseja enviar para o atendimento:`;
       }
+
+      // Atualiza botões de envio direto
+      const waBtn = $('#whatsapp-summary-btn');
+      if (waBtn) {
+        const encoded = encodeURIComponent(preparedText);
+        waBtn.href = `https://api.whatsapp.com/send?text=${encoded}`;
+      }
+
+      const mailBtn = $('#email-summary-btn');
+      if (mailBtn) {
+        const subject = encodeURIComponent(`[Contato Comercial] ${v.assunto || 'Solicitação PromoClicks'} - ${v.nome || ''}`);
+        const body = encodeURIComponent(preparedText);
+        mailBtn.href = `mailto:contato@promoclicks.com.br?subject=${subject}&body=${body}`;
+      }
+
       if (feedback) {
         feedback.hidden = false;
         feedback.focus();

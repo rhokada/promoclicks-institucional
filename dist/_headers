@@ -7,5 +7,5 @@
   Cache-Control: public, max-age=0, must-revalidate
 /assets/js/*
   Cache-Control: public, max-age=0, must-revalidate
-/assets/*
+/assets/images/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800

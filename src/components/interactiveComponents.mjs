@@ -7,7 +7,12 @@
  * 1. Ciclo de Conversão e Inteligência Comercial (Arquitetura de Receita)
  * Usado na Home e em Campanhas Exclusivas
  */
-export function renderArchitecturePipeline({ title = 'Ciclo de Conversão e Inteligência Comercial', subtitle = 'Conectamos o estímulo no ponto de venda físico à captação digital ágil e leitura analítica em 4 etapas auditáveis.' } = {}) {
+export function renderArchitecturePipeline({
+  title = 'Ciclo de Conversão e Inteligência Comercial',
+  subtitle = 'Conectamos o estímulo no ponto de venda físico à captação digital ágil e leitura analítica em 4 etapas auditáveis.',
+  actionLink = '/servicos/inteligencia-de-dados/',
+  actionLabel = 'Ver inteligência analítica'
+} = {}) {
   return `<div class="pipeline-widget" aria-label="Ciclo de Conversão e Inteligência Comercial PromoClicks">
     <div class="pipeline-widget__header">
       <div class="pipeline-widget__badge-row">
@@ -103,8 +108,8 @@ export function renderArchitecturePipeline({ title = 'Ciclo de Conversão e Inte
           <span>Processos desenhados para auditoria, alinhados às diretrizes da SPA / Ministério da Fazenda e segurança LGPD.</span>
         </div>
       </div>
-      <a href="/servicos/inteligencia-de-dados/" class="pipeline-action-link">
-        Ver inteligência analítica <span aria-hidden="true">→</span>
+      <a href="${actionLink}" class="pipeline-action-link">
+        ${actionLabel} <span aria-hidden="true">→</span>
       </a>
     </div>
   </div>`;

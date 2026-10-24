@@ -7,7 +7,7 @@
 
 export const SITE_CONFIG = {
   brandName: 'PromoClicks',
-  baseUrl: process.env.SITE_URL || 'https://promoclicks.pages.dev',
+  baseUrl: process.env.SITE_URL || 'https://promoclicks.com.br',
   campaignPortalUrl: 'https://natalpremiado.promoclicks.com.br',
   locale: 'pt-BR',
   socialInstagram: '@campanha.promoclicks',
@@ -156,11 +156,11 @@ export const SITE_CONFIG = {
     '/': {
       path: '/',
       outputFile: 'index.html',
-      title: 'PromoClicks | Promoções Regulamentadas e Aceleração de Vendas',
+      title: 'Promoções Comerciais Regulamentadas | PromoClicks',
       description:
         'A PromoClicks desenvolve campanhas promocionais legalizadas a baixo custo para empresas de todos os portes incentivarem compras e acelerarem vendas.',
       robots: 'index, follow',
-      h1: 'Sua próxima campanha começa com uma meta: vender mais.',
+      h1: 'Promoções comerciais regulamentadas para impulsionar as vendas da sua empresa',
       searchIntent: 'Institucional e Comercial B2B (Descoberta de soluções promocionais e adesão ao Natal Premiado)',
       primaryKeyword: 'campanhas promocionais regulamentadas',
       secondaryKeywords: [
@@ -178,7 +178,7 @@ export const SITE_CONFIG = {
       description:
         'Conheça a PromoClicks: empresa habilitada para operar promoções comerciais completas com segurança jurídica e baixo custo para todos os segmentos.',
       robots: 'index, follow',
-      h1: 'Acelerar vendas é o jogo. Estratégia e conformidade são o ponto de partida.',
+      h1: 'PromoClicks: estratégia, tecnologia e operação de campanhas promocionais',
       searchIntent: 'Informacional e Institucional (Avaliação de autoridade, proposta de valor e método da PromoClicks)',
       primaryKeyword: 'empresa de promoções comerciais legalizadas',
       secondaryKeywords: [
@@ -199,7 +199,7 @@ export const SITE_CONFIG = {
       description:
         'Escolha a arquitetura promocional ideal para sua empresa: campanhas coletivas por adesão com custo rateado e campanhas exclusivas sob medida.',
       robots: 'index, follow',
-      h1: 'Escolha a campanha pelo que seu negócio precisa alcançar.',
+      h1: 'Soluções em campanhas promocionais para lojas, marcas e indústrias',
       searchIntent: 'Comercial e Transacional B2B (Comparação de soluções de marketing promocional)',
       primaryKeyword: 'soluções de campanhas promocionais para empresas',
       secondaryKeywords: [
@@ -237,7 +237,7 @@ export const SITE_CONFIG = {
     '/servicos/campanhas-exclusivas/': {
       path: '/servicos/campanhas-exclusivas/',
       outputFile: 'servicos/campanhas-exclusivas/index.html',
-      title: 'Campanhas Promocionais Exclusivas para Marcas e Indústrias | PromoClicks',
+      title: 'Campanhas Promocionais Exclusivas | PromoClicks',
       description:
         'Projetos promocionais sob medida para indústrias, marcas e varejo. Modelos inovadores de participação, jornada dedicada e gestão integral SPA.',
       robots: 'index, follow',
@@ -258,7 +258,7 @@ export const SITE_CONFIG = {
     '/servicos/inteligencia-de-dados/': {
       path: '/servicos/inteligencia-de-dados/',
       outputFile: 'servicos/inteligencia-de-dados/index.html',
-      title: 'Inteligência de Dados e Métricas para Campanhas Promocionais | PromoClicks',
+      title: 'Dados para Campanhas Promocionais | PromoClicks',
       description:
         'Acompanhe a jornada promocional do alcance ao cadastro e à compra vinculada. Transforme dados de participação em decisões comerciais para recompra e retenção.',
       robots: 'index, follow',
@@ -305,7 +305,7 @@ export const SITE_CONFIG = {
       description:
         'Confira os big numbers e cases reais da PromoClicks em campanhas de 3 meses para marcas como Urbano Alimentos, Ultrafarma e L\'Oréal Paris.',
       robots: 'index, follow',
-      h1: 'Não basta chamar atenção. É preciso entender a participação.',
+      h1: 'Cases e resultados de campanhas promocionais da PromoClicks',
       searchIntent: 'Comercial e Investigativa B2B (Avaliação de evidências, indicadores de alcance/cadastro e método analítico)',
       primaryKeyword: 'cases de campanhas promocionais e indicadores',
       secondaryKeywords: [
@@ -345,7 +345,7 @@ export const SITE_CONFIG = {
       description:
         'Entre em contato com a equipe da PromoClicks para aderir ao Natal Premiado, solicitar proposta de campanha exclusiva, firmar parcerias ou esclarecer dúvidas.',
       robots: 'index, follow',
-      h1: 'Vamos definir o próximo passo da sua campanha.',
+      h1: 'Fale com a PromoClicks sobre sua campanha promocional',
       searchIntent: 'Transacional e Atendimento (Solicitação de proposta comercial, adesão a plano ou suporte)',
       primaryKeyword: 'contato comercial PromoClicks',
       secondaryKeywords: [

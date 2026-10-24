@@ -34,10 +34,10 @@ export function getOrganizationSchema() {
       'Sorteios Eletrônicos pela Loteria Federal',
       'Auditoria de Cupons Fiscais e Compliance'
     ],
-    brand: CLIENT_LOGOS.map((c) => ({
+    brand: {
       '@type': 'Brand',
-      name: c.name
-    })),
+      name: SITE_CONFIG.brandName
+    },
     sameAs: ['https://www.instagram.com/campanha.promoclicks/']
   };
 }

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://promoclicks.pages.dev/sitemap.xml
+Sitemap: https://promoclicks.com.br/sitemap.xml
