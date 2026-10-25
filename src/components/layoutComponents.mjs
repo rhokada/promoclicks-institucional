@@ -59,17 +59,12 @@ export function renderHead(routeKey) {
 }
 
 export function renderHeader(currentPath) {
-  const navLinks = SITE_CONFIG.navigation
-    .map((item) => {
-      const isCurrent =
-        item.path === currentPath ||
-        (item.path === '/servicos/' && currentPath.startsWith('/servicos/'));
-      return `<a class="nav-link"${isCurrent ? ' aria-current="page"' : ''} href="${item.path}">${item.label}</a>`;
-    })
-    .join('\n        ');
+  const isCurrent = (p) => p === currentPath;
+  const isServicos = currentPath.startsWith('/servicos/');
 
   return `<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
-  <header class="site-header">
+  <div class="header-scroll-progress" id="header-scroll-progress" aria-hidden="true"></div>
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a class="brand-logo" href="/" aria-label="PromoClicks — Ir para a página inicial">
         <picture>
@@ -77,20 +72,127 @@ export function renderHeader(currentPath) {
           <img src="/assets/images/brand/promoclicks-logo-horizontal-light.png" alt="Logotipo oficial PromoClicks" width="184" height="59" fetchpriority="high" decoding="async">
         </picture>
       </a>
+
+      <!-- Navegação Principal (Desktop & Mobile Drawer) -->
       <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
-        <div class="site-nav-list">
-          ${navLinks}
+        <!-- Cabeçalho interno exclusivo do drawer mobile -->
+        <div class="site-nav-drawer-header">
+          <a class="drawer-brand" href="/" aria-label="PromoClicks — Ir para a página inicial">
+            <img src="/assets/images/brand/promoclicks-logo-horizontal-light.webp" alt="PromoClicks" width="136" height="44">
+          </a>
+          <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Fechar menu de navegação">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         </div>
-        <div class="site-nav-mobile-cta">
-          <a href="/contato/?assunto=Quero+planejar+uma+campanha" class="btn btn--primary btn--full" data-track="cta_mobile_drawer_click">
-            Planejar Campanha / Especialista <span aria-hidden="true">→</span>
+
+        <div class="site-nav-list">
+          <!-- Início -->
+          <a class="nav-link${isCurrent('/') ? ' nav-link--active' : ''}" href="/" ${isCurrent('/') ? 'aria-current="page"' : ''} style="--nav-i: 1">
+            <span>Início</span>
+          </a>
+
+          <!-- Quem somos -->
+          <a class="nav-link${isCurrent('/quem-somos/') ? ' nav-link--active' : ''}" href="/quem-somos/" ${isCurrent('/quem-somos/') ? 'aria-current="page"' : ''} style="--nav-i: 2">
+            <span>Quem somos</span>
+          </a>
+
+          <!-- Serviços com Dropdown Desktop & Accordion Mobile -->
+          <div class="nav-item-dropdown${isServicos ? ' is-active' : ''}" id="nav-dropdown-servicos" style="--nav-i: 3">
+            <div class="nav-link-dropdown-wrap">
+              <a class="nav-link nav-link--parent${isServicos ? ' nav-link--active' : ''}" href="/servicos/" ${isServicos ? 'aria-current="page"' : ''}>
+                <span>Serviços</span>
+                <span class="dropdown-chevron" aria-hidden="true">▾</span>
+              </a>
+              <button type="button" class="mobile-submenu-toggle" id="mobile-services-toggle" aria-expanded="false" aria-label="Expandir submenu de serviços">
+                <span class="chevron-arrow" aria-hidden="true">▾</span>
+              </button>
+            </div>
+
+            <!-- Dropdown Card Desktop & Submenu Mobile -->
+            <div class="nav-dropdown-menu" id="services-submenu">
+              <a class="dropdown-item${isCurrent('/servicos/campanhas-coletivas/') ? ' dropdown-item--active' : ''}" href="/servicos/campanhas-coletivas/">
+                <span class="dropdown-item-num">01</span>
+                <div class="dropdown-item-text">
+                  <strong class="dropdown-item-title">Campanhas Coletivas</strong>
+                  <span class="dropdown-item-desc">Promoções compartilhadas com custos e premiações rateados.</span>
+                </div>
+              </a>
+              <a class="dropdown-item${isCurrent('/servicos/campanhas-exclusivas/') ? ' dropdown-item--active' : ''}" href="/servicos/campanhas-exclusivas/">
+                <span class="dropdown-item-num">02</span>
+                <div class="dropdown-item-text">
+                  <strong class="dropdown-item-title">Campanhas Exclusivas</strong>
+                  <span class="dropdown-item-desc">Ações sob medida para marcas, indústrias e grandes redes.</span>
+                </div>
+              </a>
+              <a class="dropdown-item${isCurrent('/servicos/inteligencia-de-dados/') ? ' dropdown-item--active' : ''}" href="/servicos/inteligencia-de-dados/">
+                <span class="dropdown-item-num">03</span>
+                <div class="dropdown-item-text">
+                  <strong class="dropdown-item-title">Inteligência de Dados</strong>
+                  <span class="dropdown-item-desc">Validação antifraude de cupons e relatórios SPA em tempo real.</span>
+                </div>
+              </a>
+              <div class="dropdown-footer">
+                <a href="/servicos/" class="dropdown-footer-link">Ver visão geral dos serviços <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Natal Premiado -->
+          <a class="nav-link${isCurrent('/natal-premiado/') ? ' nav-link--active' : ''}" href="/natal-premiado/" ${isCurrent('/natal-premiado/') ? 'aria-current="page"' : ''} style="--nav-i: 4">
+            <span>Natal Premiado</span>
+            <span class="nav-badge-pill" aria-hidden="true">2026</span>
+          </a>
+
+          <!-- Cases -->
+          <a class="nav-link${isCurrent('/cases/') ? ' nav-link--active' : ''}" href="/cases/" ${isCurrent('/cases/') ? 'aria-current="page"' : ''} style="--nav-i: 5">
+            <span>Cases</span>
+          </a>
+
+          <!-- Participe -->
+          <a class="nav-link${isCurrent('/participe/') ? ' nav-link--active' : ''}" href="/participe/" ${isCurrent('/participe/') ? 'aria-current="page"' : ''} style="--nav-i: 6">
+            <span>Participe</span>
+          </a>
+
+          <!-- Contato -->
+          <a class="nav-link${isCurrent('/contato/') ? ' nav-link--active' : ''}" href="/contato/" ${isCurrent('/contato/') ? 'aria-current="page"' : ''} style="--nav-i: 7">
+            <span>Contato</span>
           </a>
         </div>
+
+        <!-- Rodapé Comercial do Drawer Mobile -->
+        <div class="site-nav-drawer-footer">
+          <a href="https://wa.me/5511998765432?text=Ol%C3%A1%2C+gostaria+de+conhecer+as+solu%C3%A7%C3%B5es+da+PromoClicks" target="_blank" rel="noopener noreferrer" class="drawer-contact-pill" data-track="cta_drawer_whatsapp">
+            <span class="status-dot-pulse" aria-hidden="true"></span>
+            <span class="drawer-contact-text">Atendimento WhatsApp B2B</span>
+            <span class="pill-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/contato/?assunto=Quero+planejar+uma+campanha" class="btn btn--primary btn--full drawer-cta-btn" data-track="cta_mobile_drawer_click">
+            Planejar Minha Campanha <span aria-hidden="true">→</span>
+          </a>
+          <div class="drawer-meta-info">
+            <span>contato@promoclicks.com.br</span>
+            <span>Atendimento consultivo especializado</span>
+          </div>
+        </div>
       </nav>
+
       <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
-      <a href="/contato/?assunto=Quero+planejar+uma+campanha" class="btn btn--primary header-cta" data-track="cta_header_click" data-track-label="Header: Vamos conversar">
-        Vamos conversar <span aria-hidden="true">↗</span>
-      </a>
+
+      <!-- Ações Desktop do Header -->
+      <div class="header-actions">
+        <a href="https://wa.me/5511998765432?text=Ol%C3%A1%2C+gostaria+de+conhecer+as+solu%C3%A7%C3%B5es+da+PromoClicks" target="_blank" rel="noopener noreferrer" class="header-wa-chip" data-track="cta_header_whatsapp" aria-label="Atendimento rápido via WhatsApp">
+          <span class="status-dot-pulse" aria-hidden="true"></span>
+          <span class="header-wa-label">WhatsApp</span>
+        </a>
+        <a href="/contato/?assunto=Quero+planejar+uma+campanha" class="btn btn--primary header-cta" data-track="cta_header_click" data-track-label="Header: Planejar Campanha">
+          Planejar Campanha <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <!-- Botão Hambúrguer Mobile -->
       <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu de navegação">
         <span></span><span></span><span></span>
       </button>
@@ -176,7 +278,7 @@ export function renderPlansGrid() {
         </a>
       </article>`;
     })
-    .join('\n      ');
+    .join('\r\n      ');
 
   return `<div class="pricing-container">
       <div class="pricing-swipe-hint" aria-hidden="true">
