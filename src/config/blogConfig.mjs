@@ -77,13 +77,40 @@ export const CLIENT_LOGOS = [
     quote: 'Mecânicas de premiação e incentivo ao giro de produtos lácteos no grande varejo.'
   },
   {
-    id: 'just',
-    name: 'JUST Water',
-    segment: 'Bebidas & Embalagens Sustentáveis',
-    image: '/assets/images/clients/logo-just-v2.webp',
-    width: 146,
+    id: 'tcl',
+    name: 'TCL',
+    segment: 'Eletrônicos & Tecnologia Global',
+    image: '/assets/images/clients/logo-tcl-v2.webp',
+    width: 135,
     height: 76,
-    quote: 'Conexão direta com consumidores e ativação de propósito sustentável no consumo diário.'
+    quote: 'Campanhas de ativação de marca e incentivo a vendas no varejo eletroeletrônico.'
+  },
+  {
+    id: 'sococo',
+    name: 'Sococo',
+    segment: 'Alimentos & Derivados de Coco',
+    image: '/assets/images/clients/logo-sococo-v2.webp',
+    width: 273,
+    height: 76,
+    quote: 'Engajamento de consumidores e aceleração de giro de estoque nos canais de autosserviço.'
+  },
+  {
+    id: 'sicoob',
+    name: 'Sicoob',
+    segment: 'Sistema Financeiro Cooperativo',
+    image: '/assets/images/clients/logo-sicoob-v2.webp',
+    width: 257,
+    height: 76,
+    quote: 'Ações de incentivo, fidelização de cooperados e campanhas promocionais de alto engajamento.'
+  },
+  {
+    id: 'instituto-galo',
+    name: 'Instituto Galo',
+    segment: 'Iniciativas Sociais & Cidadania',
+    image: '/assets/images/clients/logo-instituto-galo-v2.webp',
+    width: 67,
+    height: 76,
+    quote: 'Mecânicas transparentes e mobilização de causas com auditoria e conformidade integral.'
   },
   {
     id: 'nissin',

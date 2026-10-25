@@ -1141,7 +1141,7 @@ export function getCasesContent() {
     <!-- Faixa de Clientes que Recomendam -->
     ${renderClientLogosTrustStrip({
       title: 'Marcas que Validam Nosso Histórico Comercial',
-      subtitle: 'Indústrias e redes como Urbano Alimentos, Ultrafarma, L\'Oréal Paris, Seara, SIG Combibloc, Broto Legal, Quatá Alimentos, JUST Water e Nissin Foods.',
+      subtitle: 'Grandes marcas e cooperativas como Urbano Alimentos, Ultrafarma, L\'Oréal Paris, Seara, SIG Combibloc, TCL, Sococo, Sicoob, Broto Legal, Quatá Alimentos, Instituto Galo e Nissin Foods.',
       light: true
     })}
 

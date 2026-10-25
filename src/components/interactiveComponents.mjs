@@ -241,25 +241,16 @@ export function renderCaseMetricsComparison() {
           <h4 class="case-metric-card__title">Promoção Urbano Alimentos</h4>
         </div>
 
-        <div class="case-metric-bars">
-          <div class="metric-row">
-            <div class="metric-label-row">
-              <span class="metric-label">Usuários Únicos (Alcance)</span>
-              <strong class="metric-value">180 mil</strong>
-            </div>
-            <div class="metric-bar-track">
-              <div class="metric-bar-fill metric-bar-fill--dark" style="width: 100%;"></div>
-            </div>
+        <div class="case-metric-summary">
+          <div class="case-metric-stat">
+            <span class="metric-label">Usuários Únicos</span>
+            <strong class="metric-value">180 mil</strong>
           </div>
-
-          <div class="metric-row">
-            <div class="metric-label-row">
-              <span class="metric-label">Cadastros Efetivados (Participação)</span>
-              <strong class="metric-value metric-value--primary">91 mil</strong>
-            </div>
-            <div class="metric-bar-track">
-              <div class="metric-bar-fill metric-bar-fill--gradient" style="width: 70%;"></div>
-            </div>
+          <div class="case-metric-stat">
+            <span class="metric-label">Cadastros Efetivados</span>
+            <strong class="metric-value metric-value--primary">91 mil</strong>
+          </div>
+        </div>
           </div>
         </div>
 
@@ -276,25 +267,16 @@ export function renderCaseMetricsComparison() {
           <h4 class="case-metric-card__title">Promoção Ultraprêmio (Ultrafarma)</h4>
         </div>
 
-        <div class="case-metric-bars">
-          <div class="metric-row">
-            <div class="metric-label-row">
-              <span class="metric-label">Acessos Registrados (Alcance)</span>
-              <strong class="metric-value">163 mil</strong>
-            </div>
-            <div class="metric-bar-track">
-              <div class="metric-bar-fill metric-bar-fill--dark" style="width: 90%;"></div>
-            </div>
+        <div class="case-metric-summary">
+          <div class="case-metric-stat">
+            <span class="metric-label">Acessos Registrados</span>
+            <strong class="metric-value">163 mil</strong>
           </div>
-
-          <div class="metric-row">
-            <div class="metric-label-row">
-              <span class="metric-label">Clientes Cadastrados (Participação)</span>
-              <strong class="metric-value metric-value--primary">101 mil</strong>
-            </div>
-            <div class="metric-bar-track">
-              <div class="metric-bar-fill metric-bar-fill--gradient" style="width: 62.0%;"></div>
-            </div>
+          <div class="case-metric-stat">
+            <span class="metric-label">Clientes Cadastrados</span>
+            <strong class="metric-value metric-value--primary">101 mil</strong>
+          </div>
+        </div>
           </div>
         </div>
 
@@ -311,25 +293,16 @@ export function renderCaseMetricsComparison() {
           <h4 class="case-metric-card__title">Promoção SIG (Embalagens Longa Vida)</h4>
         </div>
 
-        <div class="case-metric-bars">
-          <div class="metric-row">
-            <div class="metric-label-row">
-              <span class="metric-label">Cadeia Produtiva Rastreada</span>
-              <strong class="metric-value">100%</strong>
-            </div>
-            <div class="metric-bar-track">
-              <div class="metric-bar-fill metric-bar-fill--dark" style="width: 100%;"></div>
-            </div>
+        <div class="case-metric-summary">
+          <div class="case-metric-stat">
+            <span class="metric-label">Cadeia Produtiva Rastreada</span>
+            <strong class="metric-value">100%</strong>
           </div>
-
-          <div class="metric-row">
-            <div class="metric-label-row">
-              <span class="metric-label">Rastreio Unidade a Unidade</span>
-              <strong class="metric-value metric-value--primary">Ponta a Ponta</strong>
-            </div>
-            <div class="metric-bar-track">
-              <div class="metric-bar-fill metric-bar-fill--gradient" style="width: 100%;"></div>
-            </div>
+          <div class="case-metric-stat">
+            <span class="metric-label">Rastreio Unidade a Unidade</span>
+            <strong class="metric-value metric-value--primary">Ponta a Ponta</strong>
+          </div>
+        </div>
           </div>
         </div>
 
