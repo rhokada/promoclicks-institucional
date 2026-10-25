@@ -200,39 +200,6 @@ export function getHomeContent() {
       </div>
     </section>
 
-    <!-- Prévia de Cases e Big Numbers -->
-    <section class="section surface-light">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">Evidências e Big Numbers</span>
-            <h2>Conheça os Big Numbers da ${BRAND_HTML} e alguns cases desafiadores e seus resultados.</h2>
-          </div>
-          <p class="section-lede">
-            Mais de 343 mil acessos únicos, mais de 192 mil cadastros de participantes e cupons fiscais registrados, e 100% de conformidade regulatória perante a SPA/MF em janelas de 3 meses.
-          </p>
-        </div>
-
-        ${renderCaseMetricsComparison()}
-
-        <div style="text-align: center; margin-top: 1.5rem;">
-          <a href="/cases/" class="btn btn--outline" data-track="home_cases_cta" data-track-label="Home: Analisar cases e indicadores">
-            Analisar cases e metodologia de leitura completa <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-        ${renderCaseMetricsComparison()}
-
-        <div style="text-align: center; margin-top: 1.5rem;">
-          <a href="/cases/" class="btn btn--outline" data-track="home_cases_cta" data-track-label="Home: Analisar cases e indicadores">
-            Analisar cases e metodologia de leitura completa <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Bifurcação de Jornadas: Lojistas vs. Consumidores -->
     <section class="section surface-warm">
       <div class="container">
@@ -1161,14 +1128,12 @@ export function getCasesContent() {
         <div class="section-header">
           <div>
             <span class="eyebrow">Casos Reais do Editorial PromoClicks</span>
-            <h2>Conheça os Big Numbers da PromoClicks e alguns cases desafiadores e seus resultados.</h2>
+            <h2>Cases Desafiadores e Resultados Comprovados no Varejo</h2>
           </div>
           <p class="section-lede">
             Observe como mecânicas promocionais claras, tecnologia proprietária e governança jurídica sustentam taxas expressivas de conversão, inovação na cadeia e aceleração real de vendas.
           </p>
         </div>
-
-        ${renderCaseMetricsComparison()}
 
         <div class="cards-grid cards-grid--3">
           <article class="card card--featured">
