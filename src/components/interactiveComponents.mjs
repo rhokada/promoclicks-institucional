@@ -132,8 +132,8 @@ export function renderAuthorityPillars() {
     <div class="authority-grid">
       <!-- Pilar 1 -->
       <div class="authority-card">
-        <div class="authority-card__icon-wrap">
-          <svg class="authority-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 6l7-3 7 3"/><path d="M2 13l3-7 3 7a3 3 0 0 1-6 0z"/><path d="M16 13l3-7 3 7a3 3 0 0 1-6 0z"/><path d="M4 21h16"/></svg>
+        <div class="authority-card__icon-wrap" style="display:grid;place-items:center;">
+          <svg class="authority-icon-svg" style="width:22px;height:22px;margin:auto;display:block;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 6l7-3 7 3"/><path d="M2 13l3-7 3 7a3 3 0 0 1-6 0z"/><path d="M16 13l3-7 3 7a3 3 0 0 1-6 0z"/><path d="M4 21h16"/></svg>
         </div>
         <span class="authority-card__tag">Governança Regulatória</span>
         <h4 class="authority-card__title">Rigor Jurídico &amp; SPA</h4>
@@ -150,8 +150,8 @@ export function renderAuthorityPillars() {
 
       <!-- Pilar 2 -->
       <div class="authority-card authority-card--featured">
-        <div class="authority-card__icon-wrap authority-card__icon-wrap--featured">
-          <svg class="authority-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <div class="authority-card__icon-wrap authority-card__icon-wrap--featured" style="display:grid;place-items:center;">
+          <svg class="authority-icon-svg" style="width:22px;height:22px;margin:auto;display:block;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
         <span class="authority-card__tag authority-card__tag--featured">Experiência do Usuário</span>
         <h4 class="authority-card__title">Tecnologia &amp; Engajamento</h4>
@@ -168,8 +168,8 @@ export function renderAuthorityPillars() {
 
       <!-- Pilar 3 -->
       <div class="authority-card">
-        <div class="authority-card__icon-wrap">
-          <svg class="authority-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+        <div class="authority-card__icon-wrap" style="display:grid;place-items:center;">
+          <svg class="authority-icon-svg" style="width:22px;height:22px;margin:auto;display:block;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
         </div>
         <span class="authority-card__tag">Inteligência Comercial</span>
         <h4 class="authority-card__title">Big Data &amp; Métricas de Varejo</h4>
@@ -404,8 +404,8 @@ export function renderVisualHowItWorks() {
       <!-- Passo 01 -->
       <article class="hiw-card">
         <div class="hiw-card__header">
-          <div class="hiw-icon-circle" aria-hidden="true">
-            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="hiw-icon-circle" aria-hidden="true" style="display:grid;place-items:center;width:56px;height:56px;">
+            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:26px;height:26px;margin:auto;display:block;">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
@@ -420,15 +420,15 @@ export function renderVisualHowItWorks() {
 
         <div class="hiw-visual-simulation">
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span>Página exclusiva <code>/SUALOJA</code> + QR Code</span>
           </div>
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span>100% legalizada na SPA/MF sem burocracia</span>
           </div>
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span>Custo menor que o próprio prêmio</span>
           </div>
         </div>
@@ -436,8 +436,8 @@ export function renderVisualHowItWorks() {
 
       <!-- Seta Conectora 1 → 2 -->
       <div class="hiw-connector" aria-hidden="true">
-        <div class="hiw-connector__circle">
-          <svg class="hiw-svg-sm" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <div class="hiw-connector__circle" style="display:grid;place-items:center;width:44px;height:44px;">
+          <svg class="hiw-svg-sm" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin:auto;display:block;">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
@@ -447,8 +447,8 @@ export function renderVisualHowItWorks() {
       <!-- Passo 02 -->
       <article class="hiw-card hiw-card--accent">
         <div class="hiw-card__header">
-          <div class="hiw-icon-circle hiw-icon-circle--accent" aria-hidden="true">
-            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="hiw-icon-circle hiw-icon-circle--accent" aria-hidden="true" style="display:grid;place-items:center;width:56px;height:56px;">
+            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:26px;height:26px;margin:auto;display:block;">
               <polyline points="20 12 20 22 4 22 4 12"></polyline>
               <rect x="2" y="7" width="20" height="5"></rect>
               <line x1="12" y1="22" x2="12" y2="7"></line>
@@ -466,15 +466,15 @@ export function renderVisualHowItWorks() {
 
         <div class="hiw-visual-simulation">
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span>Cadastro rápido pelo celular (sem baixar app)</span>
           </div>
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span>Envio da foto do cupom fiscal em segundos</span>
           </div>
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span>Sorteio oficial pela Loteria Federal</span>
           </div>
         </div>
@@ -482,8 +482,8 @@ export function renderVisualHowItWorks() {
 
       <!-- Seta Conectora 2 → 3 -->
       <div class="hiw-connector" aria-hidden="true">
-        <div class="hiw-connector__circle">
-          <svg class="hiw-svg-sm" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <div class="hiw-connector__circle" style="display:grid;place-items:center;width:44px;height:44px;">
+          <svg class="hiw-svg-sm" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin:auto;display:block;">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
@@ -493,8 +493,8 @@ export function renderVisualHowItWorks() {
       <!-- Passo 03 -->
       <article class="hiw-card hiw-card--result">
         <div class="hiw-card__header">
-          <div class="hiw-icon-circle hiw-icon-circle--result" aria-hidden="true">
-            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="hiw-icon-circle hiw-icon-circle--result" aria-hidden="true" style="display:grid;place-items:center;width:56px;height:56px;">
+            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:26px;height:26px;margin:auto;display:block;">
               <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
               <polyline points="17 6 23 6 23 12"></polyline>
             </svg>
@@ -509,15 +509,15 @@ export function renderVisualHowItWorks() {
 
         <div class="hiw-visual-simulation">
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span><strong>+ Taxa de Compra:</strong> preferência pela sua loja</span>
           </div>
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span><strong>+ Ticket Médio:</strong> estímulo no caixa</span>
           </div>
           <div class="hiw-sim-row">
-            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span class="hiw-sim-check" aria-hidden="true" style="display:grid;place-items:center;">✓</span>
             <span><strong>+ Inteligência:</strong> base de clientes para LTV</span>
           </div>
         </div>

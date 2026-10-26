@@ -267,22 +267,16 @@ small, sub, sup {
 
 
 
-img, svg {
-
-
-
+img {
   max-width: 100%;
-
-
-
   height: auto;
-
-
-
   display: block;
+}
 
-
-
+svg {
+  max-width: 100%;
+  display: block;
+  flex-shrink: 0;
 }
 
 
