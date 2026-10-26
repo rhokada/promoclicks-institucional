@@ -2818,7 +2818,9 @@ p {
 
 
 
-  display: none;
+  display: flex;
+    flex-direction: column;
+    gap: 4px;
 
 
 
@@ -8489,14 +8491,13 @@ body.nav-lock {
 
 
 
+  .nav-item-dropdown .mobile-submenu-toggle .chevron-arrow,
   .nav-item-dropdown.is-expanded .mobile-submenu-toggle .chevron-arrow {
-
-
-
     transform: rotate(180deg);
+  }
 
-
-
+  .nav-item-dropdown.is-collapsed .mobile-submenu-toggle .chevron-arrow {
+    transform: rotate(0deg);
   }
 
 
@@ -8573,14 +8574,8 @@ body.nav-lock {
 
 
 
-  .nav-item-dropdown.is-expanded .nav-dropdown-menu {
-
-
-
-    display: flex;
-
-
-
+  .nav-item-dropdown.is-collapsed .nav-dropdown-menu {
+    display: none !important;
   }
 
 
@@ -17075,3 +17070,12 @@ body.nav-lock {
 
 }
 
+
+
+/* Otimização de Performance e PageSpeed Insights: Renderização assíncrona abaixo da dobra */
+@media (min-width: 768px) {
+  .section:not(.hero-section):not(.page-hero):not(.blog-hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 600px;
+  }
+}

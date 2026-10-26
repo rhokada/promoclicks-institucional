@@ -7,6 +7,18 @@ import { SITE_CONFIG } from '../config/siteConfig.mjs';
 import { CLIENT_LOGOS } from '../config/blogConfig.mjs';
 import { generateJsonLdForRoute } from '../seo/schemaGenerator.mjs';
 
+const ROUTE_LCP_IMAGES = {
+  '/': 'hero-varejo-inteligencia-promocional',
+  '/quem-somos/': 'quem-somos-governanca-estrategia-dados',
+  '/servicos/': 'servicos-ecossistema-campanhas-varejo',
+  '/servicos/campanhas-coletivas/': 'servicos-coletivas-comercio-local',
+  '/servicos/campanhas-exclusivas/': 'servicos-exclusivas-flagship-store',
+  '/servicos/inteligencia-de-dados/': 'servicos-dados-analytics-varejo',
+  '/natal-premiado/': 'natal-premiado-experiencia-varejo-sazonal',
+  '/cases/': 'cases-sucesso-crescimento-comercial',
+  '/participe/': 'participe-jornada-mobile-comprovante'
+};
+
 export function renderHead(routeKey) {
   const route = SITE_CONFIG.routes[routeKey];
   if (!route) throw new Error(`Rota não configurada: ${routeKey}`);
@@ -16,6 +28,11 @@ export function renderHead(routeKey) {
   const ogImageUrl = `${SITE_CONFIG.baseUrl}${ogImageRelative}`;
   const ogImageAlt = route.ogImageAlt || 'PromoClicks — Promoções Comerciais Regulamentadas e Aceleração de Vendas';
   const jsonLdScript = generateJsonLdForRoute(routeKey);
+
+  const lcpSlug = ROUTE_LCP_IMAGES[route.path];
+  const lcpPreload = lcpSlug
+    ? `\n  <!-- Preload da Imagem LCP (PageSpeed Insights) -->\n  <link rel="preload" as="image" href="/assets/images/editorial/${lcpSlug}-800w.webp" imagesrcset="/assets/images/editorial/${lcpSlug}-480w.webp 480w, /assets/images/editorial/${lcpSlug}-800w.webp 800w, /assets/images/editorial/${lcpSlug}-1200w.webp 1200w" imagesizes="(max-width: 920px) 100vw, 50vw" fetchpriority="high">`
+    : '';
 
   return `<head>
   <meta charset="utf-8">
@@ -48,13 +65,22 @@ export function renderHead(routeKey) {
   <meta name="twitter:image" content="${ogImageUrl}">
   <meta name="twitter:image:alt" content="${ogImageAlt}">
 
-  <!-- Tipografia Oficial do Manual: Alegreya Sans + Poppins -->
+  <!-- Tipografia Oficial do Manual: Alegreya Sans + Poppins (Otimizada para PageSpeed com carregamento assíncrono não-bloqueante) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap">
+  </noscript>
 
-  <link rel="stylesheet" href="/assets/css/main.css?v=2.6">
-  <!-- Descoberta de Agentes de IA e Catálogos de Recursos (RFC 8288, RFC 9727, ARD) -->
+  <link rel="preload" as="image" href="/assets/images/brand/promoclicks-logo-horizontal-light.webp" type="image/webp" fetchpriority="high">${lcpPreload}
+
+  <link rel="stylesheet" href="/assets/css/main.css?v=2.7">
+  <!-- Descoberta de Agentes de IA e Catálogos de Recursos (RFC 8288, RFC 9727, ARD & llmstxt.org) -->
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation">
   <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json">
   <link rel="service-desc" href="/.well-known/ai-catalog.json" type="application/json">
   <link rel="service-doc" href="/auth.md" type="text/markdown">
@@ -104,13 +130,13 @@ export function renderHeader(currentPath) {
           </a>
 
           <!-- Serviços com Dropdown Desktop & Accordion Mobile -->
-          <div class="nav-item-dropdown${isServicos ? ' is-active' : ''}" id="nav-dropdown-servicos" style="--nav-i: 3">
+          <div class="nav-item-dropdown is-expanded${isServicos ? ' is-active' : ''}" id="nav-dropdown-servicos" style="--nav-i: 3">
             <div class="nav-link-dropdown-wrap">
               <a class="nav-link nav-link--parent${isServicos ? ' nav-link--active' : ''}" href="/servicos/" ${isServicos ? 'aria-current="page"' : ''}>
                 <span>Serviços</span>
                 <span class="dropdown-chevron" aria-hidden="true">▾</span>
               </a>
-              <button type="button" class="mobile-submenu-toggle" id="mobile-services-toggle" aria-expanded="false" aria-label="Expandir submenu de serviços">
+              <button type="button" class="mobile-submenu-toggle" id="mobile-services-toggle" aria-expanded="true" aria-label="Recolher submenu de serviços">
                 <span class="chevron-arrow" aria-hidden="true">▾</span>
               </button>
             </div>

@@ -61,7 +61,7 @@ ${indexable
 writeFileSync(join(DIST, 'sitemap.xml'), sitemap, 'utf8');
 writeFileSync(join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
 
-// 4. robots.txt (com Content-Signals e Agentmap para descoberta de IA)
+// 4. robots.txt (com Content-Signals, Agentmap e LLMs.txt para descoberta de IA)
 const robotsTxt = [
   'User-agent: *',
   'Allow: /',
@@ -69,6 +69,10 @@ const robotsTxt = [
   `Sitemap: ${SITE_CONFIG.baseUrl}/sitemap.xml`,
   `Agentmap: ${SITE_CONFIG.baseUrl}/.well-known/ai-catalog.json`,
   'Content-Signal: ai-train=no, search=yes, ai-input=no',
+  '',
+  '# LLMs & AI Agent Discovery (llmstxt.org)',
+  'Allow: /llms.txt',
+  'Allow: /llms-full.txt',
   ''
 ].join('\n');
 writeFileSync(join(DIST, 'robots.txt'), robotsTxt, 'utf8');
@@ -172,11 +176,11 @@ const headersTxt = [
   '  Cache-Control: public, max-age=3600',
   '  Access-Control-Allow-Origin: *',
   '/assets/css/*',
-  '  Cache-Control: public, max-age=0, must-revalidate',
+  '  Cache-Control: public, max-age=31536000, stale-while-revalidate=86400',
   '/assets/js/*',
-  '  Cache-Control: public, max-age=0, must-revalidate',
+  '  Cache-Control: public, max-age=31536000, stale-while-revalidate=86400',
   '/assets/images/*',
-  '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
+  '  Cache-Control: public, max-age=31536000, stale-while-revalidate=604800',
   '/',
   '  Link: </.well-known/api-catalog>; rel="api-catalog", </.well-known/ai-catalog.json>; rel="service-desc", </auth.md>; rel="service-doc"',
   '  Content-Signal: ai-train=no, search=yes, ai-input=no',

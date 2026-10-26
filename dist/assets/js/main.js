@@ -205,19 +205,18 @@
     // Accordion de Serviços no Drawer Mobile
 
     if (mobileServicesToggle && navDropdownServicos) {
-
       mobileServicesToggle.addEventListener('click', (e) => {
-
         e.preventDefault();
-
         e.stopPropagation();
-
-        const expanded = navDropdownServicos.classList.toggle('is-expanded');
-
-        mobileServicesToggle.setAttribute('aria-expanded', String(expanded));
-
+        const isCollapsed = navDropdownServicos.classList.toggle('is-collapsed');
+        if (isCollapsed) {
+          navDropdownServicos.classList.remove('is-expanded');
+        } else {
+          navDropdownServicos.classList.add('is-expanded');
+        }
+        mobileServicesToggle.setAttribute('aria-expanded', String(!isCollapsed));
+        mobileServicesToggle.setAttribute('aria-label', isCollapsed ? 'Expandir submenu de serviços' : 'Recolher submenu de serviços');
       });
-
     }
 
 
