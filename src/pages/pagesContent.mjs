@@ -16,6 +16,7 @@ import {
   renderCaseMetricsComparison,
   renderNatalTimeline,
   renderSolutionsMatrix,
+  renderVisualHowItWorks,
 } from '../components/interactiveComponents.mjs';
 
 export const BRAND_HTML = '<span class="brand-name"><span class="brand-promo">Promo</span><span class="brand-clicks">Clicks</span></span>';
@@ -72,6 +73,23 @@ export function getHomeContent() {
       subtitle: 'Lideranças de mercado em bens de consumo, farmacêutica, embalagens e alimentos que aceleram resultados com soluções de inteligência promocional.',
       light: true
     })}
+
+    <!-- Como Funciona na Prática (Fluxo Visual Intuitivo: Lojista → Cliente → Escala) -->
+    <section class="section surface-warm" id="como-funciona">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Como Funciona na Prática</span>
+            <h2>Da adesão da sua loja à escala de vendas em 3 passos visuais.</h2>
+          </div>
+          <p class="section-lede">
+            Entenda de forma direta como a ${BRAND_HTML} transforma um benefício promocional para o seu cliente em maior taxa de compra, aumento de ticket médio e crescimento de faturamento.
+          </p>
+        </div>
+
+        ${renderVisualHowItWorks()}
+      </div>
+    </section>
 
     <!-- Apresentação das Soluções (Hub de Serviços) -->
     <section class="section surface-light">
