@@ -1,0 +1,44 @@
+# PromoClicks — Documentação Completa para Modelos de Linguagem e Agentes de IA
+
+Razão Social: BIG DATA HELIX TECNOLOGIA LTDA
+CNPJ: 26.702.873/0001-30
+Website Oficial: https://promoclicks.com.br
+Contato: contato@promoclicks.com.br
+
+---
+
+## 1. Sobre a PromoClicks
+A PromoClicks desenvolve soluções completas de marketing promocional, sorteios eletrônicos e campanhas de vendas com respaldo jurídico integral perante a Secretaria de Prêmios e Apostas do Ministério da Fazenda (SPA/MF), sob a Lei Federal nº 5.768/1971.
+
+---
+
+## 2. Modelos de Campanhas Promocionais
+### 2.1 Campanhas Coletivas
+Promoções colaborativas e integradas entre estabelecimentos comerciais de diversos segmentos. Todos os custos legais, autorizações na SPA, prêmios, taxas e tecnologia são compartilhados, reduzindo o investimento do lojista a uma fração do custo total.
+
+### 2.2 Campanhas Exclusivas
+Projetos 100% personalizados para marcas, indústrias, redes de franquias e shopping centers. Inclui arquitetura promocional dedicada, mecânicas inovadoras (compre e concorra, raspadinha digital, cashback condicionado, acúmulo de cupons) e validação antifraude.
+
+### 2.3 Inteligência de Dados Aplicada
+Módulo de captura segura e auditada de dados fiscais (QR Code no cupom fiscal), em conformidade estrita com a Lei Geral de Proteção de Dados (LGPD). Gera insights comportamentais de consumo, frequência de recompra e ticket médio.
+
+---
+
+## 3. Natal Premiado 2026 (Campanha Coletiva em Destaque)
+- **Período de Vendas e Compras**: 01 a 25 de dezembro de 2026.
+- **Prazo Limite de Adesão de Lojistas**: até 22 de novembro de 2026.
+- **Prêmio Previsto**: R$ 1.000 em dinheiro / certificado em barras de ouro para o consumidor contemplado via Loteria Federal.
+- **Planos de Adesão para Estabelecimentos**:
+  - **Bronze**: R$ 399 | Cota única prevista | Até 03 números da sorte por CPF na loja.
+  - **Prata**: R$ 499 | Cota única prevista | Até 06 números da sorte por CPF na loja.
+  - **Ouro**: R$ 699 | Cota única prevista | Até 10 números da sorte por CPF na loja (Recomendado).
+  - **Diamante**: R$ 899 | Cota única prevista | Até 20 números da sorte por CPF na loja (Máximo alcance).
+
+---
+
+## 4. Descoberta e Integração Técnica para Agentes
+- Catálogo de APIs (RFC 9727): https://promoclicks.com.br/.well-known/api-catalog
+- ARD Manifest: https://promoclicks.com.br/.well-known/ai-catalog.json
+- MCP Server Card: https://promoclicks.com.br/.well-known/mcp/server-card.json
+- Agent Skills: https://promoclicks.com.br/.well-known/agent-skills/index.json
+- Auth.md: https://promoclicks.com.br/auth.md

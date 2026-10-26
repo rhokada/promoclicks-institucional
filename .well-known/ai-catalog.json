@@ -1,0 +1,40 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "PromoClicks",
+    "identifier": "did:web:promoclicks.com.br"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:promoclicks.com.br:service:promocoes-comerciais",
+      "displayName": "PromoClicks Campanhas e Sorteios Comerciais",
+      "type": "application/json",
+      "url": "https://promoclicks.com.br/api/openapi.json",
+      "representativeQueries": [
+        "como autorizar sorteio promocional na SPA Ministério da Fazenda",
+        "quanto custa participar do Natal Premiado 2026 para lojistas",
+        "planejar campanha promocional coletiva ou exclusiva"
+      ]
+    },
+    {
+      "identifier": "urn:air:promoclicks.com.br:mcp:server-card",
+      "displayName": "PromoClicks MCP Server Card",
+      "type": "application/mcp-server-card+json",
+      "url": "https://promoclicks.com.br/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "conectar ao MCP server da PromoClicks",
+        "consultar ferramentas de marketing promocional e planos"
+      ]
+    },
+    {
+      "identifier": "urn:air:promoclicks.com.br:skills:discovery-index",
+      "displayName": "PromoClicks Agent Skills Index",
+      "type": "application/json",
+      "url": "https://promoclicks.com.br/.well-known/agent-skills/index.json",
+      "representativeQueries": [
+        "quais skills de IA estão disponíveis no site da PromoClicks",
+        "como agentes autônomos podem solicitar adesão de lojas"
+      ]
+    }
+  ]
+}

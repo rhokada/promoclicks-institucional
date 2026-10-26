@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://promoclicks.com.br/sitemap.xml
+Agentmap: https://promoclicks.com.br/.well-known/ai-catalog.json
+Content-Signal: ai-train=no, search=yes, ai-input=no

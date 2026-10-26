@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "consultar-planos-natal",
+      "type": "skill-md",
+      "description": "Consulta as tabelas de planos, preços e cotas de números da sorte por CPF para lojistas no Natal Premiado 2026.",
+      "url": "https://promoclicks.com.br/.well-known/agent-skills/consultar-planos-natal/SKILL.md",
+      "digest": "sha256:176e6ba1571159fdbb7071b352a7bd1c9d4c0a51762277b81c9c90ddab6eaffb"
+    },
+    {
+      "name": "solicitar-proposta-campanha",
+      "type": "skill-md",
+      "description": "Estrutura e envia briefings para adesão de estabelecimentos ou criação de campanhas promocionais exclusivas sob medida.",
+      "url": "https://promoclicks.com.br/.well-known/agent-skills/solicitar-proposta-campanha/SKILL.md",
+      "digest": "sha256:3ad9e0a98cf6d2ef21d6327b2c67508033385e1a70c0a379824691dcdb22b0ba"
+    }
+  ]
+}

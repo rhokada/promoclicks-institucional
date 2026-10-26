@@ -1,0 +1,164 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PromoClicks Public API",
+    "version": "1.0.0",
+    "description": "API pública e interfaces para agentes de IA da PromoClicks (Campanhas Comerciais, Natal Premiado 2026 e Briefings)."
+  },
+  "servers": [
+    {
+      "url": "https://promoclicks.com.br",
+      "description": "Servidor Oficial de Produção"
+    }
+  ],
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Verificação de integridade e status da API",
+        "responses": {
+          "200": {
+            "description": "Status operacional da infraestrutura",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "ok"
+                    },
+                    "uptime": {
+                      "type": "string",
+                      "example": "100%"
+                    },
+                    "timestamp": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/natal-premiado/planos": {
+      "get": {
+        "summary": "Lista os planos de adesão do Natal Premiado 2026",
+        "responses": {
+          "200": {
+            "description": "Lista completa dos planos para lojistas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "nome": {
+                        "type": "string"
+                      },
+                      "preco": {
+                        "type": "string"
+                      },
+                      "limiteNumerosCPF": {
+                        "type": "string"
+                      },
+                      "destaque": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/propostas": {
+      "post": {
+        "summary": "Submete briefing ou interesse em campanha promocional",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "nome",
+                  "email",
+                  "telefone",
+                  "perfil",
+                  "assunto"
+                ],
+                "properties": {
+                  "nome": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "telefone": {
+                    "type": "string"
+                  },
+                  "perfil": {
+                    "type": "string",
+                    "enum": [
+                      "Lojista",
+                      "Marca ou Rede",
+                      "Parceiro",
+                      "Consumidor"
+                    ]
+                  },
+                  "assunto": {
+                    "type": "string"
+                  },
+                  "empresa": {
+                    "type": "string"
+                  },
+                  "cidade": {
+                    "type": "string"
+                  },
+                  "plano": {
+                    "type": "string"
+                  },
+                  "mensagem": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Briefing registrado com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "sucesso": {
+                      "type": "boolean"
+                    },
+                    "protocolo": {
+                      "type": "string"
+                    },
+                    "mensagem": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

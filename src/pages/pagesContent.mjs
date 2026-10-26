@@ -1512,16 +1512,18 @@ export function getContatoContent() {
             Os campos marcados com <strong>*</strong> são obrigatórios. Ao selecionar um assunto comercial, campos adicionais de empresa e plano serão exibidos.
           </p>
 
-          <form id="contact-form" novalidate>
+          <form id="contact-form" novalidate
+            toolname="solicitar_proposta_campanha"
+            tooldescription="Submete proposta comercial ou pedido de adesão para campanhas promocionais e Natal Premiado 2026 da PromoClicks.">
             <div class="form-grid">
               <div class="form-field">
                 <label for="field-nome">Nome completo <span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="field-nome" name="nome" class="form-control" placeholder="Seu nome e sobrenome" autocomplete="name" required>
+                <input type="text" id="field-nome" name="nome" class="form-control" placeholder="Seu nome e sobrenome" autocomplete="name" required toolparamdescription="Nome completo do responsável comercial, lojista ou contato">
               </div>
 
               <div class="form-field">
                 <label for="field-perfil">Seu perfil <span class="req" aria-hidden="true">*</span></label>
-                <select id="field-perfil" name="perfil" class="form-control" required>
+                <select id="field-perfil" name="perfil" class="form-control" required toolparamdescription="Perfil do interessado: Lojista, Marca ou Rede, Parceiro ou Consumidor">
                   <option value="Lojista" selected>Lojista / Estabelecimento Comercial</option>
                   <option value="Marca ou Rede">Gestor de Marca / Rede / Shopping / Indústria</option>
                   <option value="Parceiro">Agência / Associação / Parceiro Comercial</option>
@@ -1531,17 +1533,17 @@ export function getContatoContent() {
 
               <div class="form-field">
                 <label for="field-email">E-mail profissional ou de contato <span class="req" aria-hidden="true">*</span></label>
-                <input type="email" id="field-email" name="email" class="form-control" placeholder="voce@empresa.com.br" autocomplete="email" required>
+                <input type="email" id="field-email" name="email" class="form-control" placeholder="voce@empresa.com.br" autocomplete="email" required toolparamdescription="E-mail profissional ou corporativo para recebimento da proposta e contato">
               </div>
 
               <div class="form-field">
                 <label for="field-telefone">Telefone / WhatsApp com DDD <span class="req" aria-hidden="true">*</span></label>
-                <input type="tel" id="field-telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" autocomplete="tel" required>
+                <input type="tel" id="field-telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" autocomplete="tel" required toolparamdescription="Telefone celular ou WhatsApp com DDD para contato direto">
               </div>
 
               <div class="form-field form-field--full">
                 <label for="field-assunto">Assunto principal <span class="req" aria-hidden="true">*</span></label>
-                <select id="field-assunto" name="assunto" class="form-control" required>
+                <select id="field-assunto" name="assunto" class="form-control" required toolparamdescription="Assunto comercial de interesse: Natal Premiado 2026, Campanha Coletiva, Campanha Exclusiva ou Inteligência de Dados">
                   <option value="Quero incluir minha empresa / loja em uma campanha" selected>Quero incluir minha empresa / loja em uma campanha</option>
                   <option value="Natal Premiado">Quero incluir minha loja no Natal Premiado 2026</option>
                   <option value="Campanha Coletiva">Interesse em próximas Campanhas Coletivas</option>
@@ -1556,18 +1558,18 @@ export function getContatoContent() {
               <!-- Campos Condicionais B2B (Empresa eCidade) -->
               <div class="form-field conditional-group" id="group-empresa">
                 <label for="field-empresa">Nome da Empresa / Loja</label>
-                <input type="text" id="field-empresa" name="empresa" class="form-control" placeholder="Nome fantasia do estabelecimento" autocomplete="organization">
+                <input type="text" id="field-empresa" name="empresa" class="form-control" placeholder="Nome fantasia do estabelecimento" autocomplete="organization" toolparamdescription="Nome fantasia ou razão social da empresa ou estabelecimento participante">
               </div>
 
               <div class="form-field conditional-group" id="group-cidade">
                 <label for="field-cidade">Cidade / UF</label>
-                <input type="text" id="field-cidade" name="cidade" class="form-control" placeholder="Ex.: São Paulo / SP">
+                <input type="text" id="field-cidade" name="cidade" class="form-control" placeholder="Ex.: São Paulo / SP" toolparamdescription="Cidade e Estado (UF) do estabelecimento comercial">
               </div>
 
               <!-- Campo Condicional: Plano do Natal Premiado -->
               <div class="form-field form-field--full conditional-group" id="group-plano" hidden>
                 <label for="field-plano">Plano de interesse no Natal Premiado (Condições Previstas)</label>
-                <select id="field-plano" name="plano" class="form-control">
+                <select id="field-plano" name="plano" class="form-control" toolparamdescription="Plano do Natal Premiado: Bronze (R$ 399), Prata (R$ 499), Ouro (R$ 699) ou Diamante (R$ 899)">
                   <option value="Ainda quero comparar os planos">Ainda quero comparar os planos com um consultor</option>
                   <option value="Bronze">Plano Bronze — R$ 399 (limite de até 03 números da sorte por CPF na loja)</option>
                   <option value="Prata">Plano Prata — R$ 499 (limite de até 06 números da sorte por CPF na loja)</option>
@@ -1578,7 +1580,7 @@ export function getContatoContent() {
 
               <div class="form-field form-field--full">
                 <label for="field-mensagem">Mensagem ou objetivos da campanha <span class="req" aria-hidden="true">*</span></label>
-                <textarea id="field-mensagem" name="mensagem" class="form-control" placeholder="Conte brevemente sobre o seu estabelecimento, segmento ou dúvida para direcionarmos o atendimento..." required></textarea>
+                <textarea id="field-mensagem" name="mensagem" class="form-control" placeholder="Conte brevemente sobre o seu estabelecimento, segmento ou dúvida para direcionarmos o atendimento..." required toolparamdescription="Detalhes do briefing, número de pontos de venda, dúvidas sobre regulamentação SPA ou expectativa de vendas"></textarea>
               </div>
 
               <div class="form-field form-field--full">

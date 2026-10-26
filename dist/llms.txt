@@ -1,0 +1,22 @@
+# PromoClicks
+
+> Estratégia, tecnologia e operação completa de campanhas promocionais e sorteios comerciais regulamentados perante a SPA/Ministério da Fazenda (Lei Federal nº 5.768/71).
+
+## Documentação e Recursos para Agentes
+- [Visão Geral e Serviços](https://promoclicks.com.br/servicos/)
+- [Campanhas Coletivas](https://promoclicks.com.br/servicos/campanhas-coletivas/)
+- [Campanhas Exclusivas para Marcas](https://promoclicks.com.br/servicos/campanhas-exclusivas/)
+- [Inteligência de Dados e Compliance SPA](https://promoclicks.com.br/servicos/inteligencia-de-dados/)
+- [Natal Premiado 2026 - Guia Completo e Planos](https://promoclicks.com.br/natal-premiado/)
+- [Jornada de Participação (Lojista e Consumidor)](https://promoclicks.com.br/participe/)
+- [Cases de Sucesso e Big Numbers](https://promoclicks.com.br/cases/)
+- [Contato Comercial e Briefing](https://promoclicks.com.br/contato/)
+
+## Catálogos e Descoberta de Agentes (AI Ready)
+- [API Catalog (RFC 9727)](https://promoclicks.com.br/.well-known/api-catalog)
+- [Agentic Resource Discovery (ARD)](https://promoclicks.com.br/.well-known/ai-catalog.json)
+- [MCP Server Card (SEP-1649)](https://promoclicks.com.br/.well-known/mcp/server-card.json)
+- [Agent Skills Index](https://promoclicks.com.br/.well-known/agent-skills/index.json)
+- [Auth.md Agent Registration](https://promoclicks.com.br/auth.md)
+- [OpenAPI Specification](https://promoclicks.com.br/api/openapi.json)
+- [Documentação Completa (llms-full.txt)](https://promoclicks.com.br/llms-full.txt)

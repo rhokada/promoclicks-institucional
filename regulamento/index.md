@@ -1,0 +1,2 @@
+# Regulamentação e Compliance | PromoClicks
+Todas as operações promocionais da PromoClicks seguem a Lei nº 5.768/1971, o Decreto nº 70.951/1972 e as normas da Secretaria de Prêmios e Apostas do Ministério da Fazenda (SPA/MF).

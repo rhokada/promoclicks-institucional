@@ -54,6 +54,10 @@ export function renderHead(routeKey) {
   <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/main.css?v=2.6">
+  <!-- Descoberta de Agentes de IA e Catálogos de Recursos (RFC 8288, RFC 9727, ARD) -->
+  <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json">
+  <link rel="service-desc" href="/.well-known/ai-catalog.json" type="application/json">
+  <link rel="service-doc" href="/auth.md" type="text/markdown">
   ${jsonLdScript}
 </head>`;
 }

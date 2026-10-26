@@ -862,5 +862,113 @@
 
   }
 
+  /* ==========================================================================
+     WebMCP (Model Context Protocol in Browser) Registration
+     Exposes client-side agent tools via document.modelContext.registerTool()
+     ========================================================================== */
+  const initWebMCP = () => {
+    const modelContext = document.modelContext || navigator.modelContext || window.modelContext;
+    if (!modelContext || typeof modelContext.registerTool !== 'function') {
+      return;
+    }
+
+    const abortController = new AbortController();
+
+    // Tool 1: Solicitar Proposta / Briefing de Campanha Promocional
+    try {
+      modelContext.registerTool({
+        name: 'solicitar_proposta_campanha',
+        description: 'Submete solicitação de proposta comercial ou adesão para o Natal Premiado 2026 e campanhas promocionais coletivas ou exclusivas da PromoClicks.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            nome: { type: 'string', description: 'Nome completo do contato' },
+            email: { type: 'string', format: 'email', description: 'E-mail corporativo para contato' },
+            telefone: { type: 'string', description: 'Telefone com DDD ou WhatsApp' },
+            perfil: {
+              type: 'string',
+              enum: ['Lojista', 'Marca ou Rede', 'Parceiro', 'Consumidor'],
+              description: 'Perfil de relacionamento'
+            },
+            assunto: { type: 'string', description: 'Assunto da solicitação comercial' },
+            empresa: { type: 'string', description: 'Nome fantasia ou razão social da loja/empresa' },
+            cidade: { type: 'string', description: 'Cidade e UF' },
+            plano: {
+              type: 'string',
+              enum: ['Bronze', 'Prata', 'Ouro', 'Diamante', 'Ainda quero comparar os planos'],
+              description: 'Plano de interesse no Natal Premiado'
+            },
+            mensagem: { type: 'string', description: 'Mensagem detalhada ou briefing da campanha' }
+          },
+          required: ['nome', 'email', 'telefone', 'perfil', 'assunto', 'mensagem']
+        },
+        execute: async (params) => {
+          const form = document.getElementById('contact-form');
+          if (form) {
+            Object.entries(params).forEach(([k, v]) => {
+              const el = form.elements[k];
+              if (el) el.value = v;
+            });
+            const event = new Event('submit', { cancelable: true, bubbles: true });
+            form.dispatchEvent(event);
+          }
+          return {
+            status: 'success',
+            message: 'Solicitação de proposta estruturada com sucesso para os canais comerciais da PromoClicks.',
+            data: params
+          };
+        }
+      }, { signal: abortController.signal });
+    } catch (e) {
+      console.warn('WebMCP tool registration error (solicitar_proposta_campanha):', e);
+    }
+
+    // Tool 2: Consultar Planos do Natal Premiado 2026
+    try {
+      modelContext.registerTool({
+        name: 'consultar_planos_natal',
+        description: 'Retorna a tabela oficial de planos, faixas de preços e cotas de números da sorte por CPF no Natal Premiado 2026.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            planoDesejado: {
+              type: 'string',
+              enum: ['todos', 'Bronze', 'Prata', 'Ouro', 'Diamante'],
+              description: 'Plano específico para consulta detalhada ou "todos"'
+            }
+          }
+        },
+        execute: async (params) => {
+          const planos = [
+            { id: 'bronze', nome: 'Bronze', preco: 'R$ 399', limiteCPF: 3, destaque: false },
+            { id: 'prata', nome: 'Prata', preco: 'R$ 499', limiteCPF: 6, destaque: false },
+            { id: 'ouro', nome: 'Ouro', preco: 'R$ 699', limiteCPF: 10, destaque: true },
+            { id: 'diamante', nome: 'Diamante', preco: 'R$ 899', limiteCPF: 20, destaque: false }
+          ];
+          const filtro = params?.planoDesejado;
+          const resultado = (!filtro || filtro === 'todos')
+            ? planos
+            : planos.filter(p => p.nome.toLowerCase() === filtro.toLowerCase());
+
+          return {
+            status: 'success',
+            prazoAdesao: 'Até 22 de novembro de 2026',
+            periodoCampanha: '01 a 25 de dezembro de 2026',
+            premio: 'R$ 1.000 em dinheiro / certificado em barras de ouro via Loteria Federal',
+            planos: resultado
+          };
+        }
+      }, { signal: abortController.signal });
+    } catch (e) {
+      console.warn('WebMCP tool registration error (consultar_planos_natal):', e);
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWebMCP);
+  } else {
+    initWebMCP();
+  }
+
 })();
 

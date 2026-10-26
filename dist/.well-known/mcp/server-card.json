@@ -1,0 +1,16 @@
+{
+  "serverInfo": {
+    "name": "PromoClicks MCP Server",
+    "version": "1.0.0"
+  },
+  "description": "Servidor MCP oficial da PromoClicks para descoberta de ferramentas de marketing promocional, conformidade legal SPA/MF e simulação de planos comerciais.",
+  "url": "https://promoclicks.com.br/mcp",
+  "transport": {
+    "type": "streamable-http"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  }
+}

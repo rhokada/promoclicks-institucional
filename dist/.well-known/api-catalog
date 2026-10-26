@@ -1,0 +1,28 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://promoclicks.com.br/api",
+      "service-desc": [
+        {
+          "href": "https://promoclicks.com.br/api/openapi.json",
+          "type": "application/json",
+          "title": "PromoClicks Public OpenAPI Specification"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://promoclicks.com.br/auth.md",
+          "type": "text/markdown",
+          "title": "PromoClicks Agent Authentication & API Documentation"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://promoclicks.com.br/api/health",
+          "type": "application/json",
+          "title": "PromoClicks API Health Status"
+        }
+      ]
+    }
+  ]
+}

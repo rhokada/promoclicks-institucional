@@ -1,0 +1,15 @@
+{
+  "resource": "https://promoclicks.com.br/api",
+  "authorization_servers": [
+    "https://promoclicks.com.br"
+  ],
+  "scopes_supported": [
+    "read:public",
+    "write:leads",
+    "agent:register"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "resource_documentation": "https://promoclicks.com.br/auth.md"
+}

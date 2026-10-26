@@ -1,0 +1,2 @@
+# Política de Privacidade | PromoClicks
+A PromoClicks respeita a privacidade de seus usuários e cumpre rigorosamente as normas da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018). Os dados coletados são utilizados exclusivamente para operacionalização e auditoria das campanhas promocionais.
