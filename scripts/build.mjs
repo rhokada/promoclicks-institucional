@@ -61,18 +61,15 @@ ${indexable
 writeFileSync(join(DIST, 'sitemap.xml'), sitemap, 'utf8');
 writeFileSync(join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
 
-// 4. robots.txt (com Content-Signals, Agentmap e LLMs.txt para descoberta de IA)
+// 4. robots.txt (com Content-Signals e Sitemap compatível com Lighthouse SEO & Descoberta de IA)
 const robotsTxt = [
   'User-agent: *',
   'Allow: /',
-  '',
-  `Sitemap: ${SITE_CONFIG.baseUrl}/sitemap.xml`,
-  `Agentmap: ${SITE_CONFIG.baseUrl}/.well-known/ai-catalog.json`,
-  'Content-Signal: ai-train=no, search=yes, ai-input=no',
-  '',
-  '# LLMs & AI Agent Discovery (llmstxt.org)',
   'Allow: /llms.txt',
   'Allow: /llms-full.txt',
+  'Content-Signal: ai-train=no, search=yes, ai-input=no',
+  '',
+  `Sitemap: ${SITE_CONFIG.baseUrl}/sitemap.xml`,
   ''
 ].join('\n');
 writeFileSync(join(DIST, 'robots.txt'), robotsTxt, 'utf8');

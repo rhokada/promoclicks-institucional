@@ -255,7 +255,7 @@
 
       '.section-header',
 
-      '.hero-grid > *',
+      /* hero-grid stays immediately visible for optimal LCP */
 
       '.features-grid',
 

@@ -206,10 +206,6 @@ small, sub, sup {
 
 
 
-.footer-bottom .brand-promo,
-
-
-
 .bg-light .brand-promo {
 
 
@@ -234,6 +230,14 @@ small, sub, sup {
 
 
 
+}
+
+.surface-light .brand-clicks,
+.card:not(.card--dark) .brand-clicks,
+.surface-cream .brand-clicks,
+.surface-warm .brand-clicks,
+.bg-light .brand-clicks {
+  color: #C23B00;
 }
 
 
@@ -1030,7 +1034,7 @@ p {
 
 
 
-  color: #D92B2B;
+  color: #C41C1C;
 
 
 
@@ -1254,6 +1258,7 @@ p {
 
 
 
+  background-color: #C41C1C;
   background: var(--pc-gradient);
 
 
@@ -1530,7 +1535,7 @@ p {
 
 
 
-  color: #D92B2B;
+  color: #C41C1C;
 
 
 
@@ -2042,7 +2047,8 @@ p {
 
 
 
-  background: linear-gradient(135deg, #FF914D, #FF3131);
+  background-color: #C41C1C;
+  background: var(--pc-gradient);
 
 
 
@@ -2630,7 +2636,7 @@ p {
 
 
 
-  color: #128C7E;
+  color: #0B6B5F;
 
 
 
@@ -4304,7 +4310,7 @@ p {
 
 
 
-  color: #C91E1E;
+  color: #B81818;
 
 
 
@@ -4568,7 +4574,7 @@ p {
 
 
 
-  color: #C91E1E;
+  color: #B81818;
 
 
 
@@ -4624,7 +4630,7 @@ p {
 
 
 
-  color: #F3CB78;
+  color: #6B4C00;
 
 
 
@@ -4860,7 +4866,7 @@ p {
 
 
 
-  color: #C92A2A;
+  color: #B81818;
 
 
 
@@ -4876,6 +4882,7 @@ p {
 
 
 
+  background-color: #C41C1C;
   background: var(--pc-gradient);
 
 
@@ -5700,6 +5707,7 @@ p {
 
 
 
+  background-color: #C41C1C;
   background: var(--pc-gradient);
 
 
@@ -6464,7 +6472,7 @@ code {
 
 
 
-  border-color: #C91E1E;
+  border-color: #B81818;
 
 
 
@@ -6480,7 +6488,7 @@ code {
 
 
 
-  color: #C91E1E;
+  color: #B81818;
 
 
 
@@ -6736,7 +6744,7 @@ code {
 
 
 
-  color: var(--pc-gray);
+  color: var(--pc-text-muted);
 
 
 
@@ -8708,7 +8716,7 @@ body.nav-lock {
 
 
 
-    color: #128C7E;
+    color: #0B6B5F;
 
 
 
@@ -8948,6 +8956,10 @@ body.nav-lock {
 
 
 
+    color: #C23B00;
+  }
+
+  .surface-dark .pricing-swipe-hint {
     color: var(--pc-orange);
 
 
@@ -9157,7 +9169,8 @@ body.nav-lock {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--pc-gradient);
+    background-color: #C41C1C;
+  background: var(--pc-gradient);
     color: var(--pc-white);
     padding: 12px 18px;
     border-radius: var(--radius-pill);
@@ -10333,6 +10346,7 @@ body.nav-lock {
 
 
 
+  background-color: #C41C1C;
   background: var(--pc-gradient);
 
 
@@ -10581,6 +10595,7 @@ body.nav-lock {
 
 
 
+  background-color: #C41C1C;
   background: var(--pc-gradient);
 
 
@@ -11681,7 +11696,7 @@ body.nav-lock {
 
 
 
-  background: #10B981;
+  background: #047857;
 
 
 
@@ -12465,7 +12480,7 @@ body.nav-lock {
 
 
 
-  color: #D92B2B;
+  color: #C41C1C;
 
 
 
@@ -12621,7 +12636,7 @@ body.nav-lock {
 
 
 
-  color: #D92B2B;
+  color: #C41C1C;
 
 
 
@@ -13041,6 +13056,7 @@ body.nav-lock {
 
 
 
+  background-color: #C41C1C;
   background: var(--pc-gradient);
 
 
@@ -13567,6 +13583,12 @@ body.nav-lock {
 
 }
 
+.solutions-matrix .pipeline-tag {
+  color: #C23B00;
+  background: var(--pc-surface-warm);
+  border-color: rgba(194, 59, 0, 0.25);
+}
+
 
 
 
@@ -13861,7 +13883,7 @@ body.nav-lock {
 
 
 
-  color: #D92B2B;
+  color: #C41C1C;
 
 
 
@@ -14897,6 +14919,7 @@ body.nav-lock {
 
 
 
+  background-color: #C41C1C;
   background: var(--pc-gradient);
 
 
@@ -15633,7 +15656,7 @@ body.nav-lock {
 
 
 
-  color: var(--pc-orange);
+  color: #9E1414;
 
 
 
@@ -16305,7 +16328,8 @@ body.nav-lock {
 
 
 
-  background: linear-gradient(135deg, #FF914D 0%, #FF3131 100%);
+  background-color: #C41C1C;
+  background: var(--pc-gradient);
 
 
 
@@ -16488,6 +16512,11 @@ body.nav-lock {
 
 
 
+  color: #C23B00;
+}
+
+.surface-dark .case-detail-label,
+.card--dark .case-detail-label {
   color: var(--pc-orange);
 
 
@@ -17054,7 +17083,7 @@ body.nav-lock {
 
   font-weight: 700;
 
-  color: #128C7E;
+  color: #0B6B5F;
 
 }
 
@@ -17066,7 +17095,7 @@ body.nav-lock {
 
   font-weight: 700;
 
-  color: #128C7E;
+  color: #0B6B5F;
 
 }
 
@@ -17078,4 +17107,18 @@ body.nav-lock {
     content-visibility: auto;
     contain-intrinsic-size: 1px 600px;
   }
+}
+
+
+/* Utilitário de acessibilidade e descoberta declarativa WebMCP */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

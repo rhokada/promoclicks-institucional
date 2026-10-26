@@ -110,7 +110,7 @@ if (!existsSync(join(DIST, 'robots.txt'))) {
 } else {
   const robots = readFileSync(join(DIST, 'robots.txt'), 'utf8');
   if (!robots.includes('Content-Signal: ai-train=no, search=yes, ai-input=no')) err('robots.txt', 'Content-Signal ausente');
-  if (!robots.includes('Agentmap:')) err('robots.txt', 'Agentmap ausente');
+  if (!robots.includes('Sitemap:')) err('robots.txt', 'Sitemap ausente');
 }
 
 // Cobertura de classes CSS (toda classe usada no HTML precisa existir na folha de estilo)

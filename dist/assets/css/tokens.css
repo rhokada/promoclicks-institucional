@@ -5,9 +5,10 @@
  */
 
 :root {
-  /* Paleta Cromática Oficial — Manual de Marca PromoClicks (Pág. 22) */
-  --pc-red: #FF3131;          /* Color 1 / Color 4: Vermelho principal de ação */
-  --pc-orange: #FF914D;       /* Color 2 / Color 5: Laranja principal promocional */
+  /* Paleta Cromática Oficial — Manual de Marca PromoClicks (Pág. 22) + Calibração WCAG AA (≥ 4.5:1) */
+  --pc-red: #C41C1C;          /* Color 1 / Color 4: Vermelho principal de ação calibrado para contraste WCAG AA */
+  --pc-orange: #FF914D;       /* Color 2 / Color 5: Laranja principal promocional (fundos escuros) */
+  --pc-orange-accessible: #C23B00; /* Laranja de alto contraste para fundos claros (5.35:1) */
   --pc-charcoal: #404040;     /* Color 3 / Color 10: Cinza escuro / Grafite institucional */
   --pc-black: #000000;        /* Color 6: Preto absoluto de contraste e segurança */
   --pc-white: #FFFFFF;        /* Color 7 / 9 / 11: Branco puro de respiro */
@@ -33,9 +34,9 @@
   --pc-gold-spark: #E5B95C;
   --pc-gold-soft: rgba(229, 185, 92, 0.16);
 
-  /* Gradientes Oficiais */
-  --pc-gradient: linear-gradient(108deg, #FF3131 0%, #FF914D 100%);
-  --pc-gradient-hover: linear-gradient(108deg, #E62525 0%, #FF8338 100%);
+  /* Gradientes Oficiais (Calibrados para Contraste WCAG AA com texto branco ≥ 4.8:1) */
+  --pc-gradient: linear-gradient(108deg, #C41C1C 0%, #C8460C 100%);
+  --pc-gradient-hover: linear-gradient(108deg, #A81515 0%, #B33B06 100%);
   --pc-gradient-subtle: linear-gradient(135deg, rgba(255, 49, 49, 0.08) 0%, rgba(255, 145, 77, 0.14) 100%);
   --pc-gradient-dark: linear-gradient(135deg, #111111 0%, #242120 62%, #141414 100%);
 

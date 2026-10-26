@@ -13,7 +13,7 @@ export function renderArchitecturePipeline({
   actionLink = '/servicos/inteligencia-de-dados/',
   actionLabel = 'Ver inteligência analítica'
 } = {}) {
-  return `<div class="pipeline-widget" aria-label="Ciclo de Conversão e Inteligência Comercial PromoClicks">
+  return `<div class="pipeline-widget" role="region" aria-label="Ciclo de Conversão e Inteligência Comercial PromoClicks">
     <div class="pipeline-widget__header">
       <div class="pipeline-widget__badge-row">
         <span class="pipeline-tag">Método Operacional PromoClicks</span>
@@ -120,7 +120,7 @@ export function renderArchitecturePipeline({
  * Substitui o diagrama de arquétipos na página Quem Somos
  */
 export function renderAuthorityPillars() {
-  return `<div class="authority-widget" aria-label="Pilares de Excelência Operacional PromoClicks">
+  return `<div class="authority-widget" role="region" aria-label="Pilares de Excelência Operacional PromoClicks">
     <div class="authority-widget__header">
       <span class="pipeline-tag">Excelência Corporativa</span>
       <h3 class="authority-widget__title">Rigor Executivo, Conformidade Jurídica e Tecnologia de Dados</h3>
@@ -210,7 +210,7 @@ export function renderCaseMetricsComparison() {
  * Usado na página Natal Premiado e Campanhas Coletivas
  */
 export function renderNatalTimeline() {
-  return `<div class="timeline-widget" aria-label="Cronograma Operacional do Natal Premiado 2026">
+  return `<div class="timeline-widget" role="region" aria-label="Cronograma Operacional do Natal Premiado 2026">
     <div class="timeline-widget__header">
       <div class="metric-header-top">
         <span class="pipeline-tag">Cronograma Previsto · Edição 2026</span>
@@ -307,7 +307,7 @@ export function renderNatalTimeline() {
  * Usado na página Serviços
  */
 export function renderSolutionsMatrix() {
-  return `<div class="solutions-matrix" aria-label="Matriz Comparativa de Soluções PromoClicks">
+  return `<div class="solutions-matrix" role="region" aria-label="Matriz Comparativa de Soluções PromoClicks">
     <div class="solutions-matrix__header">
       <span class="pipeline-tag">Arquitetura de Soluções B2B</span>
       <h3 class="solutions-matrix__title">Como Escolher a Solução Ideal para o seu Momento Comercial</h3>

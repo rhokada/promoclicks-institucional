@@ -31,7 +31,7 @@ export function renderHead(routeKey) {
 
   const lcpSlug = ROUTE_LCP_IMAGES[route.path];
   const lcpPreload = lcpSlug
-    ? `\n  <!-- Preload da Imagem LCP (PageSpeed Insights) -->\n  <link rel="preload" as="image" href="/assets/images/editorial/${lcpSlug}-800w.webp" imagesrcset="/assets/images/editorial/${lcpSlug}-480w.webp 480w, /assets/images/editorial/${lcpSlug}-800w.webp 800w, /assets/images/editorial/${lcpSlug}-1200w.webp 1200w" imagesizes="(max-width: 920px) 100vw, 50vw" fetchpriority="high">`
+    ? `\n  <!-- Preload da Imagem LCP (PageSpeed Insights Mobile & Desktop) -->\n  <link rel="preload" as="image" href="/assets/images/editorial/${lcpSlug}-480w.webp" imagesrcset="/assets/images/editorial/${lcpSlug}-480w.webp 480w, /assets/images/editorial/${lcpSlug}-800w.webp 800w, /assets/images/editorial/${lcpSlug}-1200w.webp 1200w" imagesizes="(max-width: 920px) 100vw, 50vw" fetchpriority="high">`
     : '';
 
   return `<head>
@@ -78,7 +78,7 @@ export function renderHead(routeKey) {
 
   <link rel="preload" as="image" href="/assets/images/brand/promoclicks-logo-horizontal-light.webp" type="image/webp" fetchpriority="high">${lcpPreload}
 
-  <link rel="stylesheet" href="/assets/css/main.css?v=2.7">
+  <link rel="stylesheet" href="/assets/css/main.css?v=2.8">
   <!-- Descoberta de Agentes de IA e Catálogos de Recursos (RFC 8288, RFC 9727, ARD & llmstxt.org) -->
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation">
   <link rel="api-catalog" href="/.well-known/api-catalog" type="application/linkset+json">
@@ -314,7 +314,7 @@ export function renderPlansGrid() {
       <div class="pricing-swipe-hint" aria-hidden="true">
         <span>⇄ Deslize horizontalmente para comparar os 4 planos</span>
       </div>
-      <div class="pricing-grid" aria-label="Planos de adesão previstos para o Natal Premiado">
+      <div class="pricing-grid" role="region" aria-label="Planos de adesão previstos para o Natal Premiado">
         ${cards}
       </div>
     </div>`;
@@ -328,7 +328,7 @@ export function renderClientLogosTrustStrip({
   const sectionClass = light ? 'section clients-section surface-light' : 'section clients-section surface-dark';
 
   const logoCards = CLIENT_LOGOS.map((client) => `
-    <div class="client-logo-card" data-client="${client.id}">
+    <div class="client-logo-card" role="listitem" data-client="${client.id}">
       <div class="client-logo-img-wrap">
         <picture>
           <source srcset="${client.image}" type="image/webp">
@@ -420,6 +420,13 @@ export function renderFooter() {
       <div class="footer-bottom">
         <p>© 2026 <span class="brand-name"><span class="brand-promo">Promo</span><span class="brand-clicks">Clicks</span></span>. Todos os direitos reservados. Razão Social: <strong>BIG DATA HELIX TECNOLOGIA LTDA</strong> (CNPJ: 26.702.873/0001-30).</p>
         <p>Portal institucional — Campanhas promocionais e sorteios comerciais regulamentados perante a SPA – Secretaria de Prêmios e Apostas do Ministério da Fazenda.</p>
+        <form action="/contato/" method="get" class="sr-only" toolname="consultar_campanha_promoclicks" tooldescription="Direciona agentes autônomos e usuários para solicitar proposta de campanha promocional coletiva (Natal Premiado 2026) ou exclusiva junto à PromoClicks.">
+          <label for="agent-quick-perfil">Perfil comercial</label>
+          <input type="text" id="agent-quick-perfil" name="perfil" value="Lojista" toolparamdescription="Perfil do solicitante: Lojista, Marca ou Rede, Parceiro ou Consumidor">
+          <label for="agent-quick-assunto">Assunto</label>
+          <input type="text" id="agent-quick-assunto" name="assunto" value="Natal Premiado" toolparamdescription="Modalidade desejada: Natal Premiado, Campanha Exclusiva ou Inteligência de Dados">
+          <button type="submit">Solicitar Proposta</button>
+        </form>
       </div>
     </div>
   </footer>
@@ -431,7 +438,7 @@ export function renderFooter() {
     </a>
   </aside>
   <script src="/assets/js/analytics.js" defer></script>
-  <script src="/assets/js/main.js?v=2.2" defer></script>`;
+  <script src="/assets/js/main.js?v=2.3" defer></script>`;
 }
 
 export function renderPageLayout(routeKey, mainContentHtml) {
