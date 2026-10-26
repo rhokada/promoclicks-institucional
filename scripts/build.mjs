@@ -42,6 +42,7 @@ for (const [routeKey, route] of Object.entries(SITE_CONFIG.routes)) {
 // 3. sitemap.xml (apenas URLs canônicas indexáveis)
 const today = new Date().toISOString().slice(0, 10);
 const priority = (p) => (p === '/' ? '1.0' : p === '/natal-premiado/' ? '0.9' : p.split('/').length > 3 ? '0.7' : '0.8');
+const changefreq = (p) => (p === '/' ? 'daily' : 'weekly');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${indexable
@@ -49,6 +50,7 @@ ${indexable
     (p) => `  <url>
     <loc>${SITE_CONFIG.baseUrl}${p}</loc>
     <lastmod>${today}</lastmod>
+    <changefreq>${changefreq(p)}</changefreq>
     <priority>${priority(p)}</priority>
   </url>`
   )
@@ -67,6 +69,10 @@ writeFileSync(join(ROOT, 'robots.txt'), robotsTxt, 'utf8');
 // Nota: Cloudflare Workers Assets não permite status 404 em _redirects (apenas 200, 301, 302, 303, 307, 308).
 // O 404 é tratado nativamente via "not_found_handling": "404-page" no wrangler.jsonc.
 const redirectsTxt = [
+  '/sitemap                                      /sitemap.xml                           301',
+  '/sitemap/                                     /sitemap.xml                           301',
+  '/sitemap.xml/                                 /sitemap.xml                           301',
+  '/sitemap_index.xml                            /sitemap.xml                           301',
   '/index.html                                  /                                      301',
   '/quem-somos                                  /quem-somos/                           301',
   '/quem-somos/index.html                       /quem-somos/                           301',
@@ -97,19 +103,28 @@ const redirectsTxt = [
 writeFileSync(join(DIST, '_redirects'), redirectsTxt, 'utf8');
 writeFileSync(join(ROOT, '_redirects'), redirectsTxt, 'utf8');
 
-// 6. _headers (Cloudflare Pages) — segurança e política de cache inteligente sem sobreposição conflitante
+// 6. _headers (Cloudflare Pages / Workers Assets) — segurança e política de cache inteligente sem sobreposição conflitante
 const headersTxt = [
-  '/*',
-  '  X-Content-Type-Options: nosniff',
-  '  X-Frame-Options: SAMEORIGIN',
-  '  Referrer-Policy: strict-origin-when-cross-origin',
-  '  Permissions-Policy: camera=(), microphone=(), geolocation=()',
+  '/sitemap.xml',
+  '  Content-Type: application/xml; charset=utf-8',
+  '  Cache-Control: public, max-age=0, must-revalidate',
+  '  Access-Control-Allow-Origin: *',
+  '  X-Robots-Tag: all',
+  '/robots.txt',
+  '  Content-Type: text/plain; charset=utf-8',
+  '  Cache-Control: public, max-age=0, must-revalidate',
+  '  Access-Control-Allow-Origin: *',
   '/assets/css/*',
   '  Cache-Control: public, max-age=0, must-revalidate',
   '/assets/js/*',
   '  Cache-Control: public, max-age=0, must-revalidate',
   '/assets/images/*',
   '  Cache-Control: public, max-age=86400, stale-while-revalidate=604800',
+  '/*',
+  '  X-Content-Type-Options: nosniff',
+  '  X-Frame-Options: SAMEORIGIN',
+  '  Referrer-Policy: strict-origin-when-cross-origin',
+  '  Permissions-Policy: camera=(), microphone=(), geolocation=()',
   ''
 ].join('\n');
 writeFileSync(join(DIST, '_headers'), headersTxt, 'utf8');
