@@ -73,24 +73,6 @@ export function getHomeContent() {
       subtitle: 'Lideranças de mercado em bens de consumo, farmacêutica, embalagens e alimentos que aceleram resultados com soluções de inteligência promocional.',
       light: true
     })}
-
-    <!-- Como Funciona na Prática (Fluxo Visual Intuitivo: Lojista → Cliente → Escala) -->
-    <section class="section surface-warm" id="como-funciona">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="eyebrow">Como Funciona na Prática</span>
-            <h2>Da adesão da sua loja à escala de vendas em 3 passos visuais.</h2>
-          </div>
-          <p class="section-lede">
-            Entenda de forma direta como a ${BRAND_HTML} transforma um benefício promocional para o seu cliente em maior taxa de compra, aumento de ticket médio e crescimento de faturamento.
-          </p>
-        </div>
-
-        ${renderVisualHowItWorks()}
-      </div>
-    </section>
-
     <!-- Apresentação das Soluções (Hub de Serviços) -->
     <section class="section surface-light">
       <div class="container">
@@ -164,24 +146,26 @@ export function getHomeContent() {
       </div>
     </section>
 
-    <!-- Arquitetura de Receita: Método Operacional -->
-    <section class="section surface-light">
+    <!-- Como Funciona na Prática (Fluxo Visual Intuitivo: Lojista → Cliente → Escala) -->
+    <section class="section surface-light" id="como-funciona">
       <div class="container">
         <div class="section-header">
           <div>
-            <span class="eyebrow">Método Operacional</span>
-            <h2>Como transformamos campanhas promocionais em alavanca de receita.</h2>
+            <span class="eyebrow">Como Funciona na Prática</span>
+            <h2>Você contrata um plano, oferece um benefício real ao seu cliente e escala suas vendas.</h2>
           </div>
           <p class="section-lede">
-            Uma promoção de alto impacto não depende de improviso. Conectamos estímulo de compras no ponto de venda físico, validação digital ágil e inteligência analítica em etapas auditáveis.
+            Conectamos a adesão acessível da sua empresa ao estímulo direto no ponto de venda para gerar maior taxa de compra, aumento de ticket médio e base qualificada de clientes.
           </p>
         </div>
 
-        ${renderArchitecturePipeline()}
+        ${renderVisualHowItWorks()}
 
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-          <a href="/quem-somos/" class="btn btn--outline">Conhecer nosso método e governança</a>
-          <a href="/servicos/inteligencia-de-dados/" class="btn btn--primary">Explorar inteligência de dados <span aria-hidden="true">→</span></a>
+        <div class="cta-group" style="justify-content: center; margin-top: 2rem;">
+          <a href="/contato/?perfil=Lojista&amp;assunto=Quero+incluir+minha+empresa+/+loja+em+uma+campanha" class="btn btn--primary" data-track="hiw_visual_cta">
+            Quero contratar um plano para minha empresa <span aria-hidden="true">→</span>
+          </a>
+          <a href="/natal-premiado/" class="btn btn--outline">Ver planos do Natal Premiado (a partir de R$ 399)</a>
         </div>
       </div>
     </section>

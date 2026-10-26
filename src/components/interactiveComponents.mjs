@@ -396,57 +396,59 @@ export function renderSolutionsMatrix() {
 
 /**
  * 6. Fluxo Visual "Como Funciona na Prática" (Jornada do Lojista → Benefício ao Cliente → Escala de Ganhos)
- * Usado na Home para exemplificar visualmente, com ícones e indicadores intuitivos, a alavanca de conversão
+ * Usado na Home para exemplificar visualmente, com ícones perfeitamente centralizados e badges visuais, o ciclo de ganhos
  */
 export function renderVisualHowItWorks() {
   return `<div class="how-it-works-visual" role="region" aria-label="Como funciona a parceria PromoClicks na prática">
     <div class="hiw-flow-grid">
-      <!-- Passo 1 -->
+      <!-- Passo 01 -->
       <article class="hiw-card">
-        <div class="hiw-card__top">
-          <div class="hiw-icon-box" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="hiw-card__header">
+          <div class="hiw-icon-circle" aria-hidden="true">
+            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
           </div>
-          <div class="hiw-step-meta">
-            <span class="hiw-step-num">PASSO 01</span>
-            <span class="hiw-step-pill">Lojista / Empresa</span>
+          <span class="hiw-step-badge">1. Sua Empresa</span>
+        </div>
+
+        <h3 class="hiw-card__title">Contrata um Plano Acessível</h3>
+        <p class="hiw-card__desc">
+          Você adere a uma campanha coletiva (como o <strong>Natal Premiado</strong>) ou exclusiva por uma fração do custo de fazer sozinho.
+        </p>
+
+        <div class="hiw-visual-simulation">
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span>Página exclusiva <code>/SUALOJA</code> + QR Code</span>
+          </div>
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span>100% legalizada na SPA/MF sem burocracia</span>
+          </div>
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span>Custo menor que o próprio prêmio</span>
           </div>
         </div>
-        <h3 class="hiw-card__title">Sua Empresa Contrata um Plano</h3>
-        <p class="hiw-card__desc">
-          Você escolhe o plano ideal (Coletivo ou Exclusivo) por uma fração do custo de fazer sozinho. A PromoClicks entrega sua <strong>página exclusiva</strong>, QR Code próprio, kit de PDV e 100% da homologação na SPA/MF.
-        </p>
-        <ul class="hiw-mini-list">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Investimento menor que o próprio prêmio</span>
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Zero burocracia jurídica para sua loja</span>
-          </li>
-        </ul>
       </article>
 
       <!-- Seta Conectora 1 → 2 -->
       <div class="hiw-connector" aria-hidden="true">
         <div class="hiw-connector__circle">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="hiw-svg-sm" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </div>
-        <span class="hiw-connector__label">Oferece no PDV</span>
       </div>
 
-      <!-- Passo 2 -->
+      <!-- Passo 02 -->
       <article class="hiw-card hiw-card--accent">
-        <div class="hiw-card__top">
-          <div class="hiw-icon-box hiw-icon-box--accent" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="hiw-card__header">
+          <div class="hiw-icon-circle hiw-icon-circle--accent" aria-hidden="true">
+            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 12 20 22 4 22 4 12"></polyline>
               <rect x="2" y="7" width="20" height="5"></rect>
               <line x1="12" y1="22" x2="12" y2="7"></line>
@@ -454,106 +456,72 @@ export function renderVisualHowItWorks() {
               <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
             </svg>
           </div>
-          <div class="hiw-step-meta">
-            <span class="hiw-step-num">PASSO 02</span>
-            <span class="hiw-step-pill hiw-step-pill--accent">Benefício ao Cliente</span>
+          <span class="hiw-step-badge hiw-step-badge--accent">2. Seu Cliente</span>
+        </div>
+
+        <h3 class="hiw-card__title">Recebe o Benefício ao Comprar</h3>
+        <p class="hiw-card__desc">
+          A cada compra elegível na sua loja, seu cliente escaneia o QR Code no balcão e recebe <strong>números da sorte</strong> para concorrer a prêmios em dinheiro.
+        </p>
+
+        <div class="hiw-visual-simulation">
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span>Cadastro rápido pelo celular (sem baixar app)</span>
+          </div>
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span>Envio da foto do cupom fiscal em segundos</span>
+          </div>
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span>Sorteio oficial pela Loteria Federal</span>
           </div>
         </div>
-        <h3 class="hiw-card__title">Seu Cliente Ganha Chances Reais</h3>
-        <p class="hiw-card__desc">
-          Ao comprar na sua loja, seu cliente recebe um benefício tangível: ele escaneia o QR Code da sua vitrine ou balcão, cadastra o cupom fiscal pelo celular em segundos e <strong>concorre a prêmios oficiais em dinheiro</strong>.
-        </p>
-        <ul class="hiw-mini-list">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Cadastro 100% web mobile sem baixar app</span>
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Números da sorte auditados pela Loteria Federal</span>
-          </li>
-        </ul>
       </article>
 
       <!-- Seta Conectora 2 → 3 -->
       <div class="hiw-connector" aria-hidden="true">
         <div class="hiw-connector__circle">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="hiw-svg-sm" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </div>
-        <span class="hiw-connector__label">Gera Resultado</span>
       </div>
 
-      <!-- Passo 3 -->
+      <!-- Passo 03 -->
       <article class="hiw-card hiw-card--result">
-        <div class="hiw-card__top">
-          <div class="hiw-icon-box hiw-icon-box--result" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="hiw-card__header">
+          <div class="hiw-icon-circle hiw-icon-circle--result" aria-hidden="true">
+            <svg class="hiw-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
               <polyline points="17 6 23 6 23 12"></polyline>
             </svg>
           </div>
-          <div class="hiw-step-meta">
-            <span class="hiw-step-num">PASSO 03</span>
-            <span class="hiw-step-pill hiw-step-pill--result">Escala de Ganhos</span>
-          </div>
+          <span class="hiw-step-badge hiw-step-badge--result">3. Resultado Comercial</span>
         </div>
-        <h3 class="hiw-card__title">Mais Compras, Ticket Maior e Escala</h3>
-        <p class="hiw-card__desc">
-          Para ganhar mais números da sorte, o consumidor <strong>compra mais vezes e adiciona mais itens ao carrinho</strong>. Sua empresa vende mais, fideliza clientes e constrói uma base de dados própria para crescer.
-        </p>
-        <ul class="hiw-mini-list">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Elevação direta da taxa de conversão e recompra</span>
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Inteligência de dados e LTV para escalar vendas</span>
-          </li>
-        </ul>
-      </article>
-    </div>
 
-    <!-- Barra de Resumo de Impacto Visual -->
-    <div class="hiw-impact-bar">
-      <div class="hiw-impact-bar__items">
-        <div class="hiw-impact-pill">
-          <span class="hiw-impact-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          </span>
-          <div>
-            <strong>+ Taxa de Compra</strong>
-            <span>Cliente prefere comprar onde ganha benefício</span>
+        <h3 class="hiw-card__title">Mais Compras e Escala de Ganhos</h3>
+        <p class="hiw-card__desc">
+          Para acumular mais chances de ganhar, o consumidor <strong>escolhe a sua loja</strong>, aumenta o valor da compra e volta mais vezes.
+        </p>
+
+        <div class="hiw-visual-simulation">
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span><strong>+ Taxa de Compra:</strong> preferência pela sua loja</span>
+          </div>
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span><strong>+ Ticket Médio:</strong> estímulo no caixa</span>
+          </div>
+          <div class="hiw-sim-row">
+            <span class="hiw-sim-check" aria-hidden="true">✓</span>
+            <span><strong>+ Inteligência:</strong> base de clientes para LTV</span>
           </div>
         </div>
-        <div class="hiw-impact-pill">
-          <span class="hiw-impact-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </span>
-          <div>
-            <strong>+ Ticket Médio</strong>
-            <span>Incentivo no caixa para atingir o valor elegível</span>
-          </div>
-        </div>
-        <div class="hiw-impact-pill">
-          <span class="hiw-impact-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
-          </span>
-          <div>
-            <strong>+ Escala &amp; Dados</strong>
-            <span>Base própria de clientes para recompra contínua</span>
-          </div>
-        </div>
-      </div>
-      <div class="hiw-impact-bar__cta">
-        <a href="/natal-premiado/" class="btn btn--outline">Ver planos a partir de R$ 399</a>
-        <a href="/contato/?perfil=Lojista&amp;assunto=Quero+incluir+minha+empresa+/+loja+em+uma+campanha" class="btn btn--primary" data-track="hiw_visual_cta">
-          Quero contratar para minha empresa <span aria-hidden="true">→</span>
-        </a>
-      </div>
+      </article>
     </div>
   </div>`;
 }
