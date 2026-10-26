@@ -999,14 +999,14 @@ export function getNatalPremiadoContent() {
             <li class="step-item">
               <span class="step-badge">3</span>
               <div class="step-body">
-                <h3>26 de dezembro de 2026</h3>
-                <p>Data prevista para apuração e auditoria/validação documental da participação contemplada conforme regulamento oficial.</p>
+                <h3>30 de dezembro de 2026</h3>
+                <p>Data do Sorteio pela extração da Loteria Federal.</p>
               </div>
             </li>
             <li class="step-item">
               <span class="step-badge">4</span>
               <div class="step-body">
-                <h3>29 de dezembro de 2026</h3>
+                <h3>4 de Janeiro de 2027</h3>
                 <p>Divulgação oficial do resultado após a confirmação de conformidade dos dados e entrega do prêmio de R$ 1.000.</p>
               </div>
             </li>
